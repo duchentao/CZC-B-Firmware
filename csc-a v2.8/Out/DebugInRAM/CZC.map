@@ -1,0 +1,1319 @@
+ARM Linker, 5.03 [Build 76] [MDK-ARM Standard]
+
+==============================================================================
+
+Section Cross References
+
+    startup_lpc17xx.o(RESET) refers to startup_lpc17xx.o(STACK) for __initial_sp
+    startup_lpc17xx.o(RESET) refers to startup_lpc17xx.o(.text) for Reset_Handler
+    startup_lpc17xx.o(RESET) refers to os_cpu_c.o(.emb_text) for SVC_Handler
+    startup_lpc17xx.o(RESET) refers to os_cpu_c.o(i.SysTick_Handler) for SysTick_Handler
+    startup_lpc17xx.o(RESET) refers to uart.o(i.UART0_IRQHandler) for UART0_IRQHandler
+    startup_lpc17xx.o(RESET) refers to uart.o(i.UART1_IRQHandler) for UART1_IRQHandler
+    startup_lpc17xx.o(RESET) refers to uart.o(i.UART2_IRQHandler) for UART2_IRQHandler
+    startup_lpc17xx.o(RESET) refers to uart.o(i.UART3_IRQHandler) for UART3_IRQHandler
+    startup_lpc17xx.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    system_lpc17xx.o(i.SystemInit) refers to system_lpc17xx.o(.data) for SystemFrequency
+    main.o(i.Open_Delay) refers to main.o(i.Delay1Us) for Delay1Us
+    main.o(i.TASK_IO) refers to io.o(i.IO_init) for IO_init
+    main.o(i.TASK_IO) refers to watchdog.o(i.wdt_feed) for wdt_feed
+    main.o(i.TASK_IO) refers to io.o(i.IO_ReadSwitch) for IO_ReadSwitch
+    main.o(i.TASK_IO) refers to io.o(i.IO_InputScan) for IO_InputScan
+    main.o(i.TASK_IO) refers to io.o(i.IO_ReadMute) for IO_ReadMute
+    main.o(i.TASK_IO) refers to io.o(i.IO_OutputCtrl) for IO_OutputCtrl
+    main.o(i.TASK_IO) refers to os_time.o(i.OSTimeDly) for OSTimeDly
+    main.o(i.TASK_IO) refers to main.o(.data) for tog_sw
+    main.o(i.TASK_IO) refers to io.o(.data) for mute_flag
+    main.o(i.TASK_SHOW) refers to io.o(i.IO_OutputCtrl) for IO_OutputCtrl
+    main.o(i.TASK_SHOW) refers to os_time.o(i.OSTimeDly) for OSTimeDly
+    main.o(i.TASK_SHOW) refers to main.o(.data) for flash_1s_flag
+    main.o(i.TASK_TIMER) refers to io.o(i.IO_OutputCtrl) for IO_OutputCtrl
+    main.o(i.TASK_TIMER) refers to os_time.o(i.OSTimeDly) for OSTimeDly
+    main.o(i.TASK_TIMER) refers to main.o(.data) for flash_L3_flag
+    main.o(i.main) refers to main.o(i.Delay10kUs) for Delay10kUs
+    main.o(i.main) refers to system_lpc17xx.o(i.SystemInit) for SystemInit
+    main.o(i.main) refers to watchdog.o(i.wdt_init) for wdt_init
+    main.o(i.main) refers to uart.o(i.UART2_Init) for UART2_Init
+    main.o(i.main) refers to os_core.o(i.OSInit) for OSInit
+    main.o(i.main) refers to os_task.o(i.OSTaskCreateExt) for OSTaskCreateExt
+    main.o(i.main) refers to os_sem.o(i.OSSemCreate) for OSSemCreate
+    main.o(i.main) refers to os_core.o(i.OSStart) for OSStart
+    main.o(i.main) refers to main.o(.bss) for TASK_IO_STACK
+    main.o(i.main) refers to main.o(i.TASK_IO) for TASK_IO
+    main.o(i.main) refers to main.o(i.TASK_TIMER) for TASK_TIMER
+    main.o(i.main) refers to task_modbus.o(.bss) for TASK_TIME_STACK
+    main.o(i.main) refers to task_modbus.o(i.TASK_TIME) for TASK_TIME
+    main.o(i.main) refers to task_modbus.o(i.TASK_MODBUS1_SLAVE) for TASK_MODBUS1_SLAVE
+    main.o(i.main) refers to main.o(.data) for RecvUARTFlag0
+    main.o(i.modbus1_updata) refers to main.o(.data) for flash_L3_flag
+    uart.o(i.TIME_PROCESS) refers to uart.o(i.uart0_timeout_8byte_stop) for uart0_timeout_8byte_stop
+    uart.o(i.TIME_PROCESS) refers to os_sem.o(i.OSSemPost) for OSSemPost
+    uart.o(i.TIME_PROCESS) refers to uart.o(i.uart1_timeout_8byte_stop) for uart1_timeout_8byte_stop
+    uart.o(i.TIME_PROCESS) refers to uart.o(i.uart2_timeout_8byte_stop) for uart2_timeout_8byte_stop
+    uart.o(i.TIME_PROCESS) refers to uart.o(i.uart3_timeout_8byte_stop) for uart3_timeout_8byte_stop
+    uart.o(i.TIME_PROCESS) refers to os_time.o(i.OSTimeDly) for OSTimeDly
+    uart.o(i.TIME_PROCESS) refers to uart.o(.data) for uart0_timeout_start
+    uart.o(i.TIME_PROCESS) refers to main.o(.data) for RecvUARTFlag0
+    uart.o(i.UART0_IRQHandler) refers to os_core.o(i.OSIntEnter) for OSIntEnter
+    uart.o(i.UART0_IRQHandler) refers to uart.o(i.uart0_timeout_8byte_stop) for uart0_timeout_8byte_stop
+    uart.o(i.UART0_IRQHandler) refers to uart.o(i.uart0_timeout_8byte_start) for uart0_timeout_8byte_start
+    uart.o(i.UART0_IRQHandler) refers to os_sem.o(i.OSSemPost) for OSSemPost
+    uart.o(i.UART0_IRQHandler) refers to os_core.o(i.OSIntExit) for OSIntExit
+    uart.o(i.UART0_IRQHandler) refers to uart.o(.data) for uart0_rcv_counter
+    uart.o(i.UART0_IRQHandler) refers to uart.o(.bss) for uart0_temp
+    uart.o(i.UART0_IRQHandler) refers to main.o(.data) for RecvUARTFlag0
+    uart.o(i.UART0_Init) refers to dfltui.o(.text) for __aeabi_ui2d
+    uart.o(i.UART0_Init) refers to ddiv.o(.text) for __aeabi_ddiv
+    uart.o(i.UART0_Init) refers to dfixui.o(.text) for __aeabi_d2uiz
+    uart.o(i.UART0_Init) refers to uart.o(i.NVIC_EnableIRQ) for NVIC_EnableIRQ
+    uart.o(i.UART0_Init) refers to uart.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    uart.o(i.UART0_Init) refers to uart.o(.data) for send_time_out0
+    uart.o(i.UART0_Init) refers to system_lpc17xx.o(.data) for SystemFrequency
+    uart.o(i.UART0_SendByte) refers to uart.o(.data) for send_time_out0
+    uart.o(i.UART0_SendStr) refers to uart.o(i.UART0_SendByte) for UART0_SendByte
+    uart.o(i.UART1_IRQHandler) refers to os_core.o(i.OSIntEnter) for OSIntEnter
+    uart.o(i.UART1_IRQHandler) refers to uart.o(i.uart1_timeout_8byte_stop) for uart1_timeout_8byte_stop
+    uart.o(i.UART1_IRQHandler) refers to uart.o(i.uart1_timeout_8byte_start) for uart1_timeout_8byte_start
+    uart.o(i.UART1_IRQHandler) refers to os_sem.o(i.OSSemPost) for OSSemPost
+    uart.o(i.UART1_IRQHandler) refers to os_core.o(i.OSIntExit) for OSIntExit
+    uart.o(i.UART1_IRQHandler) refers to uart.o(.data) for uart1_rcv_counter
+    uart.o(i.UART1_IRQHandler) refers to uart.o(.bss) for uart1_temp
+    uart.o(i.UART1_IRQHandler) refers to main.o(.data) for RecvUARTFlag1
+    uart.o(i.UART1_Init) refers to dfltui.o(.text) for __aeabi_ui2d
+    uart.o(i.UART1_Init) refers to ddiv.o(.text) for __aeabi_ddiv
+    uart.o(i.UART1_Init) refers to dfixui.o(.text) for __aeabi_d2uiz
+    uart.o(i.UART1_Init) refers to uart.o(i.NVIC_EnableIRQ) for NVIC_EnableIRQ
+    uart.o(i.UART1_Init) refers to uart.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    uart.o(i.UART1_Init) refers to uart.o(.data) for send_time_out1
+    uart.o(i.UART1_Init) refers to system_lpc17xx.o(.data) for SystemFrequency
+    uart.o(i.UART1_SendByte) refers to uart.o(.data) for send_time_out1
+    uart.o(i.UART1_SendStr) refers to uart.o(i.UART1_SendByte) for UART1_SendByte
+    uart.o(i.UART2_IRQHandler) refers to os_core.o(i.OSIntEnter) for OSIntEnter
+    uart.o(i.UART2_IRQHandler) refers to uart.o(i.uart2_timeout_8byte_stop) for uart2_timeout_8byte_stop
+    uart.o(i.UART2_IRQHandler) refers to uart.o(i.uart2_timeout_8byte_start) for uart2_timeout_8byte_start
+    uart.o(i.UART2_IRQHandler) refers to os_sem.o(i.OSSemPost) for OSSemPost
+    uart.o(i.UART2_IRQHandler) refers to os_core.o(i.OSIntExit) for OSIntExit
+    uart.o(i.UART2_IRQHandler) refers to uart.o(.data) for uart2_rcv_counter
+    uart.o(i.UART2_IRQHandler) refers to uart.o(.bss) for uart2_temp
+    uart.o(i.UART2_IRQHandler) refers to main.o(.data) for RecvUARTFlag2
+    uart.o(i.UART2_Init) refers to dfltui.o(.text) for __aeabi_ui2d
+    uart.o(i.UART2_Init) refers to ddiv.o(.text) for __aeabi_ddiv
+    uart.o(i.UART2_Init) refers to dfixui.o(.text) for __aeabi_d2uiz
+    uart.o(i.UART2_Init) refers to uart.o(i.NVIC_EnableIRQ) for NVIC_EnableIRQ
+    uart.o(i.UART2_Init) refers to uart.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    uart.o(i.UART2_Init) refers to uart.o(.data) for send_time_out2
+    uart.o(i.UART2_Init) refers to system_lpc17xx.o(.data) for SystemFrequency
+    uart.o(i.UART2_SendByte) refers to uart.o(.data) for send_time_out2
+    uart.o(i.UART2_SendStr) refers to uart.o(i.UART2_SendByte) for UART2_SendByte
+    uart.o(i.UART3_IRQHandler) refers to os_core.o(i.OSIntEnter) for OSIntEnter
+    uart.o(i.UART3_IRQHandler) refers to uart.o(i.uart3_timeout_8byte_stop) for uart3_timeout_8byte_stop
+    uart.o(i.UART3_IRQHandler) refers to uart.o(i.uart3_timeout_8byte_start) for uart3_timeout_8byte_start
+    uart.o(i.UART3_IRQHandler) refers to os_sem.o(i.OSSemPost) for OSSemPost
+    uart.o(i.UART3_IRQHandler) refers to os_core.o(i.OSIntExit) for OSIntExit
+    uart.o(i.UART3_IRQHandler) refers to uart.o(.data) for uart3_rcv_counter
+    uart.o(i.UART3_IRQHandler) refers to uart.o(.bss) for uart3_temp
+    uart.o(i.UART3_IRQHandler) refers to main.o(.data) for RecvUARTFlag3
+    uart.o(i.UART3_Init) refers to dfltui.o(.text) for __aeabi_ui2d
+    uart.o(i.UART3_Init) refers to ddiv.o(.text) for __aeabi_ddiv
+    uart.o(i.UART3_Init) refers to dfixui.o(.text) for __aeabi_d2uiz
+    uart.o(i.UART3_Init) refers to uart.o(i.NVIC_EnableIRQ) for NVIC_EnableIRQ
+    uart.o(i.UART3_Init) refers to uart.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    uart.o(i.UART3_Init) refers to uart.o(.data) for send_time_out3
+    uart.o(i.UART3_Init) refers to system_lpc17xx.o(.data) for SystemFrequency
+    uart.o(i.UART3_SendByte) refers to uart.o(.data) for send_time_out3
+    uart.o(i.UART3_SendStr) refers to uart.o(i.UART3_SendByte) for UART3_SendByte
+    uart.o(i.uart0_timeout_8byte_start) refers to uart.o(.data) for uart0_timeout_start
+    uart.o(i.uart0_timeout_8byte_stop) refers to uart.o(.data) for uart0_timeout_start
+    uart.o(i.uart1_timeout_8byte_start) refers to uart.o(.data) for uart1_timeout_start
+    uart.o(i.uart1_timeout_8byte_stop) refers to uart.o(.data) for uart1_timeout_start
+    uart.o(i.uart2_timeout_8byte_start) refers to uart.o(.data) for uart2_timeout_start
+    uart.o(i.uart2_timeout_8byte_stop) refers to uart.o(.data) for uart2_timeout_start
+    uart.o(i.uart3_timeout_8byte_start) refers to uart.o(.data) for uart3_timeout_start
+    uart.o(i.uart3_timeout_8byte_stop) refers to uart.o(.data) for uart3_timeout_start
+    io.o(i.IO_InputScan) refers to io.o(i.ReadInput) for ReadInput
+    io.o(i.IO_InputScan) refers to io.o(.bss) for cnt_p
+    io.o(i.IO_ReadMute) refers to io.o(.data) for cnt_p
+    io.o(i.IO_init) refers to io.o(i.IO_OutputCtrl) for IO_OutputCtrl
+    modbus.o(i.crc16) refers to modbus.o(.constdata) for auchCRCHi
+    modbus.o(i.crc_detect) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus0_ask03) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus0_ask03) refers to uart.o(i.UART0_SendByte) for UART0_SendByte
+    modbus.o(i.modbus0_err_reply) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus0_err_reply) refers to uart.o(i.UART0_SendByte) for UART0_SendByte
+    modbus.o(i.modbus0_listen) refers to os_sem.o(i.OSSemPend) for OSSemPend
+    modbus.o(i.modbus0_listen) refers to modbus.o(i.crc_detect) for crc_detect
+    modbus.o(i.modbus0_listen) refers to main.o(.data) for RecvUARTFlag0
+    modbus.o(i.modbus0_listen) refers to uart.o(.data) for uart0_receive_num
+    modbus.o(i.modbus0_listen) refers to uart.o(.bss) for uart0_temp
+    modbus.o(i.modbus0_read03) refers to uart.o(i.uart0_timeout_8byte_stop) for uart0_timeout_8byte_stop
+    modbus.o(i.modbus0_read03) refers to os_sem.o(i.OSSemPend) for OSSemPend
+    modbus.o(i.modbus0_read03) refers to modbus.o(i.crc_detect) for crc_detect
+    modbus.o(i.modbus0_read03) refers to main.o(.data) for RecvUARTFlag0
+    modbus.o(i.modbus0_read03) refers to uart.o(.bss) for uart0_temp
+    modbus.o(i.modbus0_read05) refers to uart.o(i.uart0_timeout_8byte_stop) for uart0_timeout_8byte_stop
+    modbus.o(i.modbus0_read05) refers to os_sem.o(i.OSSemPend) for OSSemPend
+    modbus.o(i.modbus0_read05) refers to modbus.o(i.crc_detect) for crc_detect
+    modbus.o(i.modbus0_read05) refers to main.o(.data) for RecvUARTFlag0
+    modbus.o(i.modbus0_read05) refers to uart.o(.data) for uart0_receive_num
+    modbus.o(i.modbus0_read05) refers to uart.o(.bss) for uart0_temp
+    modbus.o(i.modbus0_read06) refers to uart.o(i.uart0_timeout_8byte_stop) for uart0_timeout_8byte_stop
+    modbus.o(i.modbus0_read06) refers to os_sem.o(i.OSSemPend) for OSSemPend
+    modbus.o(i.modbus0_read06) refers to modbus.o(i.crc_detect) for crc_detect
+    modbus.o(i.modbus0_read06) refers to main.o(.data) for RecvUARTFlag0
+    modbus.o(i.modbus0_read06) refers to uart.o(.data) for uart0_receive_num
+    modbus.o(i.modbus0_read06) refers to uart.o(.bss) for uart0_temp
+    modbus.o(i.modbus0_read16) refers to uart.o(i.uart0_timeout_8byte_stop) for uart0_timeout_8byte_stop
+    modbus.o(i.modbus0_read16) refers to os_sem.o(i.OSSemPend) for OSSemPend
+    modbus.o(i.modbus0_read16) refers to modbus.o(i.crc_detect) for crc_detect
+    modbus.o(i.modbus0_read16) refers to main.o(.data) for RecvUARTFlag0
+    modbus.o(i.modbus0_read16) refers to uart.o(.data) for uart0_receive_num
+    modbus.o(i.modbus0_read16) refers to uart.o(.bss) for uart0_temp
+    modbus.o(i.modbus0_reply) refers to memseta.o(.text) for __aeabi_memclr4
+    modbus.o(i.modbus0_reply) refers to uart.o(i.UART0_SendByte) for UART0_SendByte
+    modbus.o(i.modbus0_reply) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus0_set05) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus0_set05) refers to uart.o(i.UART0_SendByte) for UART0_SendByte
+    modbus.o(i.modbus0_set06) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus0_set06) refers to uart.o(i.UART0_SendByte) for UART0_SendByte
+    modbus.o(i.modbus0_set16) refers to memseta.o(.text) for __aeabi_memclr4
+    modbus.o(i.modbus0_set16) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus0_set16) refers to uart.o(i.UART0_SendByte) for UART0_SendByte
+    modbus.o(i.modbus1_ask03) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus1_ask03) refers to uart.o(i.UART1_SendByte) for UART1_SendByte
+    modbus.o(i.modbus1_err_reply) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus1_err_reply) refers to uart.o(i.UART1_SendByte) for UART1_SendByte
+    modbus.o(i.modbus1_listen) refers to os_sem.o(i.OSSemPend) for OSSemPend
+    modbus.o(i.modbus1_listen) refers to modbus.o(i.crc_detect) for crc_detect
+    modbus.o(i.modbus1_listen) refers to main.o(.data) for RecvUARTFlag1
+    modbus.o(i.modbus1_listen) refers to uart.o(.data) for uart1_receive_num
+    modbus.o(i.modbus1_listen) refers to uart.o(.bss) for uart1_temp
+    modbus.o(i.modbus1_read03) refers to uart.o(i.uart1_timeout_8byte_stop) for uart1_timeout_8byte_stop
+    modbus.o(i.modbus1_read03) refers to os_sem.o(i.OSSemPend) for OSSemPend
+    modbus.o(i.modbus1_read03) refers to modbus.o(i.crc_detect) for crc_detect
+    modbus.o(i.modbus1_read03) refers to main.o(.data) for RecvUARTFlag1
+    modbus.o(i.modbus1_read03) refers to uart.o(.bss) for uart1_temp
+    modbus.o(i.modbus1_read05) refers to uart.o(i.uart1_timeout_8byte_stop) for uart1_timeout_8byte_stop
+    modbus.o(i.modbus1_read05) refers to os_sem.o(i.OSSemPend) for OSSemPend
+    modbus.o(i.modbus1_read05) refers to modbus.o(i.crc_detect) for crc_detect
+    modbus.o(i.modbus1_read05) refers to main.o(.data) for RecvUARTFlag1
+    modbus.o(i.modbus1_read05) refers to uart.o(.data) for uart1_receive_num
+    modbus.o(i.modbus1_read05) refers to uart.o(.bss) for uart1_temp
+    modbus.o(i.modbus1_read06) refers to uart.o(i.uart1_timeout_8byte_stop) for uart1_timeout_8byte_stop
+    modbus.o(i.modbus1_read06) refers to os_sem.o(i.OSSemPend) for OSSemPend
+    modbus.o(i.modbus1_read06) refers to modbus.o(i.crc_detect) for crc_detect
+    modbus.o(i.modbus1_read06) refers to main.o(.data) for RecvUARTFlag1
+    modbus.o(i.modbus1_read06) refers to uart.o(.data) for uart1_receive_num
+    modbus.o(i.modbus1_read06) refers to uart.o(.bss) for uart1_temp
+    modbus.o(i.modbus1_read16) refers to uart.o(i.uart1_timeout_8byte_stop) for uart1_timeout_8byte_stop
+    modbus.o(i.modbus1_read16) refers to os_sem.o(i.OSSemPend) for OSSemPend
+    modbus.o(i.modbus1_read16) refers to modbus.o(i.crc_detect) for crc_detect
+    modbus.o(i.modbus1_read16) refers to main.o(.data) for RecvUARTFlag1
+    modbus.o(i.modbus1_read16) refers to uart.o(.data) for uart1_receive_num
+    modbus.o(i.modbus1_read16) refers to uart.o(.bss) for uart1_temp
+    modbus.o(i.modbus1_reply) refers to memseta.o(.text) for __aeabi_memclr4
+    modbus.o(i.modbus1_reply) refers to uart.o(i.UART1_SendByte) for UART1_SendByte
+    modbus.o(i.modbus1_reply) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus1_set05) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus1_set05) refers to uart.o(i.UART1_SendByte) for UART1_SendByte
+    modbus.o(i.modbus1_set06) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus1_set06) refers to uart.o(i.UART1_SendByte) for UART1_SendByte
+    modbus.o(i.modbus1_set16) refers to memseta.o(.text) for __aeabi_memclr4
+    modbus.o(i.modbus1_set16) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus1_set16) refers to uart.o(i.UART1_SendByte) for UART1_SendByte
+    modbus.o(i.modbus2_ask03) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus2_ask03) refers to uart.o(i.UART2_SendByte) for UART2_SendByte
+    modbus.o(i.modbus2_err_reply) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus2_err_reply) refers to uart.o(i.UART2_SendByte) for UART2_SendByte
+    modbus.o(i.modbus2_listen) refers to os_sem.o(i.OSSemPend) for OSSemPend
+    modbus.o(i.modbus2_listen) refers to modbus.o(i.crc_detect) for crc_detect
+    modbus.o(i.modbus2_listen) refers to main.o(.data) for RecvUARTFlag2
+    modbus.o(i.modbus2_listen) refers to uart.o(.data) for uart2_receive_num
+    modbus.o(i.modbus2_listen) refers to uart.o(.bss) for uart2_temp
+    modbus.o(i.modbus2_listen) refers to modbus.o(.data) for subaddr
+    modbus.o(i.modbus2_read03) refers to uart.o(i.uart2_timeout_8byte_stop) for uart2_timeout_8byte_stop
+    modbus.o(i.modbus2_read03) refers to os_sem.o(i.OSSemPend) for OSSemPend
+    modbus.o(i.modbus2_read03) refers to modbus.o(i.crc_detect) for crc_detect
+    modbus.o(i.modbus2_read03) refers to main.o(.data) for RecvUARTFlag2
+    modbus.o(i.modbus2_read03) refers to uart.o(.bss) for uart2_temp
+    modbus.o(i.modbus2_read05) refers to uart.o(i.uart2_timeout_8byte_stop) for uart2_timeout_8byte_stop
+    modbus.o(i.modbus2_read05) refers to os_sem.o(i.OSSemPend) for OSSemPend
+    modbus.o(i.modbus2_read05) refers to modbus.o(i.crc_detect) for crc_detect
+    modbus.o(i.modbus2_read05) refers to main.o(.data) for RecvUARTFlag2
+    modbus.o(i.modbus2_read05) refers to uart.o(.data) for uart2_receive_num
+    modbus.o(i.modbus2_read05) refers to uart.o(.bss) for uart2_temp
+    modbus.o(i.modbus2_read06) refers to uart.o(i.uart2_timeout_8byte_stop) for uart2_timeout_8byte_stop
+    modbus.o(i.modbus2_read06) refers to os_sem.o(i.OSSemPend) for OSSemPend
+    modbus.o(i.modbus2_read06) refers to modbus.o(i.crc_detect) for crc_detect
+    modbus.o(i.modbus2_read06) refers to main.o(.data) for RecvUARTFlag2
+    modbus.o(i.modbus2_read06) refers to uart.o(.data) for uart2_receive_num
+    modbus.o(i.modbus2_read06) refers to uart.o(.bss) for uart2_temp
+    modbus.o(i.modbus2_read16) refers to uart.o(i.uart2_timeout_8byte_stop) for uart2_timeout_8byte_stop
+    modbus.o(i.modbus2_read16) refers to os_sem.o(i.OSSemPend) for OSSemPend
+    modbus.o(i.modbus2_read16) refers to modbus.o(i.crc_detect) for crc_detect
+    modbus.o(i.modbus2_read16) refers to main.o(.data) for RecvUARTFlag2
+    modbus.o(i.modbus2_read16) refers to uart.o(.data) for uart2_receive_num
+    modbus.o(i.modbus2_read16) refers to uart.o(.bss) for uart2_temp
+    modbus.o(i.modbus2_reply) refers to memseta.o(.text) for __aeabi_memclr4
+    modbus.o(i.modbus2_reply) refers to uart.o(i.UART2_SendByte) for UART2_SendByte
+    modbus.o(i.modbus2_reply) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus2_set05) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus2_set05) refers to uart.o(i.UART2_SendByte) for UART2_SendByte
+    modbus.o(i.modbus2_set06) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus2_set06) refers to uart.o(i.UART2_SendByte) for UART2_SendByte
+    modbus.o(i.modbus2_set16) refers to memseta.o(.text) for __aeabi_memclr4
+    modbus.o(i.modbus2_set16) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus2_set16) refers to uart.o(i.UART2_SendByte) for UART2_SendByte
+    modbus.o(i.modbus3_ask03) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus3_ask03) refers to uart.o(i.UART3_SendByte) for UART3_SendByte
+    modbus.o(i.modbus3_err_reply) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus3_err_reply) refers to uart.o(i.UART3_SendByte) for UART3_SendByte
+    modbus.o(i.modbus3_listen) refers to os_sem.o(i.OSSemPend) for OSSemPend
+    modbus.o(i.modbus3_listen) refers to modbus.o(i.crc_detect) for crc_detect
+    modbus.o(i.modbus3_listen) refers to main.o(.data) for RecvUARTFlag3
+    modbus.o(i.modbus3_listen) refers to uart.o(.data) for uart3_receive_num
+    modbus.o(i.modbus3_listen) refers to uart.o(.bss) for uart3_temp
+    modbus.o(i.modbus3_read03) refers to uart.o(i.uart3_timeout_8byte_stop) for uart3_timeout_8byte_stop
+    modbus.o(i.modbus3_read03) refers to os_sem.o(i.OSSemPend) for OSSemPend
+    modbus.o(i.modbus3_read03) refers to modbus.o(i.crc_detect) for crc_detect
+    modbus.o(i.modbus3_read03) refers to main.o(.data) for RecvUARTFlag3
+    modbus.o(i.modbus3_read03) refers to uart.o(.bss) for uart3_temp
+    modbus.o(i.modbus3_read05) refers to uart.o(i.uart3_timeout_8byte_stop) for uart3_timeout_8byte_stop
+    modbus.o(i.modbus3_read05) refers to os_sem.o(i.OSSemPend) for OSSemPend
+    modbus.o(i.modbus3_read05) refers to modbus.o(i.crc_detect) for crc_detect
+    modbus.o(i.modbus3_read05) refers to main.o(.data) for RecvUARTFlag3
+    modbus.o(i.modbus3_read05) refers to uart.o(.data) for uart3_receive_num
+    modbus.o(i.modbus3_read05) refers to uart.o(.bss) for uart3_temp
+    modbus.o(i.modbus3_read06) refers to uart.o(i.uart3_timeout_8byte_stop) for uart3_timeout_8byte_stop
+    modbus.o(i.modbus3_read06) refers to os_sem.o(i.OSSemPend) for OSSemPend
+    modbus.o(i.modbus3_read06) refers to modbus.o(i.crc_detect) for crc_detect
+    modbus.o(i.modbus3_read06) refers to main.o(.data) for RecvUARTFlag3
+    modbus.o(i.modbus3_read06) refers to uart.o(.data) for uart3_receive_num
+    modbus.o(i.modbus3_read06) refers to uart.o(.bss) for uart3_temp
+    modbus.o(i.modbus3_read16) refers to uart.o(i.uart3_timeout_8byte_stop) for uart3_timeout_8byte_stop
+    modbus.o(i.modbus3_read16) refers to os_sem.o(i.OSSemPend) for OSSemPend
+    modbus.o(i.modbus3_read16) refers to modbus.o(i.crc_detect) for crc_detect
+    modbus.o(i.modbus3_read16) refers to main.o(.data) for RecvUARTFlag3
+    modbus.o(i.modbus3_read16) refers to uart.o(.data) for uart3_receive_num
+    modbus.o(i.modbus3_read16) refers to uart.o(.bss) for uart3_temp
+    modbus.o(i.modbus3_reply) refers to memseta.o(.text) for __aeabi_memclr4
+    modbus.o(i.modbus3_reply) refers to uart.o(i.UART3_SendByte) for UART3_SendByte
+    modbus.o(i.modbus3_reply) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus3_set05) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus3_set05) refers to uart.o(i.UART3_SendByte) for UART3_SendByte
+    modbus.o(i.modbus3_set06) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus3_set06) refers to uart.o(i.UART3_SendByte) for UART3_SendByte
+    modbus.o(i.modbus3_set16) refers to memseta.o(.text) for __aeabi_memclr4
+    modbus.o(i.modbus3_set16) refers to modbus.o(i.crc16) for crc16
+    modbus.o(i.modbus3_set16) refers to uart.o(i.UART3_SendByte) for UART3_SendByte
+    task_modbus.o(i.TASK_MODBUS1_SLAVE) refers to memseta.o(.text) for __aeabi_memclr
+    task_modbus.o(i.TASK_MODBUS1_SLAVE) refers to io.o(i.IO_OutputCtrl) for IO_OutputCtrl
+    task_modbus.o(i.TASK_MODBUS1_SLAVE) refers to modbus.o(i.modbus2_listen) for modbus2_listen
+    task_modbus.o(i.TASK_MODBUS1_SLAVE) refers to main.o(i.modbus1_updata) for modbus1_updata
+    task_modbus.o(i.TASK_MODBUS1_SLAVE) refers to modbus.o(i.modbus2_reply) for modbus2_reply
+    task_modbus.o(i.TASK_MODBUS1_SLAVE) refers to modbus.o(i.modbus2_err_reply) for modbus2_err_reply
+    task_modbus.o(i.TASK_MODBUS1_SLAVE) refers to modbus.o(.bss) for modbus1_buf
+    task_modbus.o(i.TASK_MODBUS1_SLAVE) refers to main.o(.data) for SLAVE_ADDR1
+    task_modbus.o(i.TASK_TIME) refers to uart.o(i.TIME_PROCESS) for TIME_PROCESS
+    task_setup.o(i.TASK_SETUP) refers to memseta.o(.text) for __aeabi_memclr
+    task_setup.o(i.TASK_SETUP) refers to modbus.o(i.modbus0_listen) for modbus0_listen
+    task_setup.o(i.TASK_SETUP) refers to modbus.o(i.modbus0_reply) for modbus0_reply
+    task_setup.o(i.TASK_SETUP) refers to modbus.o(i.modbus0_err_reply) for modbus0_err_reply
+    task_setup.o(i.TASK_SETUP) refers to modbus.o(.bss) for modbus0_buf
+    os_sem.o(i.OSSemCreate) refers to os_core.o(i.OS_EventWaitListInit) for OS_EventWaitListInit
+    os_sem.o(i.OSSemCreate) refers to os_core.o(.data) for OSIntNesting
+    os_sem.o(i.OSSemDel) refers to os_core.o(i.OS_EventTaskRdy) for OS_EventTaskRdy
+    os_sem.o(i.OSSemDel) refers to os_core.o(i.OS_Sched) for OS_Sched
+    os_sem.o(i.OSSemDel) refers to os_core.o(.data) for OSIntNesting
+    os_sem.o(i.OSSemPend) refers to os_core.o(i.OS_EventTaskWait) for OS_EventTaskWait
+    os_sem.o(i.OSSemPend) refers to os_core.o(i.OS_Sched) for OS_Sched
+    os_sem.o(i.OSSemPend) refers to os_core.o(i.OS_EventTO) for OS_EventTO
+    os_sem.o(i.OSSemPend) refers to os_core.o(.data) for OSIntNesting
+    os_sem.o(i.OSSemPost) refers to os_core.o(i.OS_EventTaskRdy) for OS_EventTaskRdy
+    os_sem.o(i.OSSemPost) refers to os_core.o(i.OS_Sched) for OS_Sched
+    os_task.o(i.OSTaskChangePrio) refers to os_core.o(i.OS_Sched) for OS_Sched
+    os_task.o(i.OSTaskChangePrio) refers to os_core.o(.bss) for OSTCBPrioTbl
+    os_task.o(i.OSTaskChangePrio) refers to os_core.o(.constdata) for OSMapTbl
+    os_task.o(i.OSTaskChangePrio) refers to os_core.o(.data) for OSTCBCur
+    os_task.o(i.OSTaskCreate) refers to os_cpu_c.o(i.OSTaskStkInit) for OSTaskStkInit
+    os_task.o(i.OSTaskCreate) refers to os_core.o(i.OS_TCBInit) for OS_TCBInit
+    os_task.o(i.OSTaskCreate) refers to os_core.o(i.OS_Sched) for OS_Sched
+    os_task.o(i.OSTaskCreate) refers to os_core.o(.bss) for OSTCBPrioTbl
+    os_task.o(i.OSTaskCreate) refers to os_core.o(.data) for OSTaskCtr
+    os_task.o(i.OSTaskCreateExt) refers to memseta.o(.text) for __aeabi_memclr4
+    os_task.o(i.OSTaskCreateExt) refers to os_cpu_c.o(i.OSTaskStkInit) for OSTaskStkInit
+    os_task.o(i.OSTaskCreateExt) refers to os_core.o(i.OS_TCBInit) for OS_TCBInit
+    os_task.o(i.OSTaskCreateExt) refers to os_core.o(i.OS_Sched) for OS_Sched
+    os_task.o(i.OSTaskCreateExt) refers to os_core.o(.bss) for OSTCBPrioTbl
+    os_task.o(i.OSTaskCreateExt) refers to os_core.o(.data) for OSTaskCtr
+    os_task.o(i.OSTaskDel) refers to os_flag.o(i.OS_FlagUnlink) for OS_FlagUnlink
+    os_task.o(i.OSTaskDel) refers to os_core.o(i.OS_Dummy) for OS_Dummy
+    os_task.o(i.OSTaskDel) refers to ostaskdelhook.o(.text) for OSTaskDelHook
+    os_task.o(i.OSTaskDel) refers to os_core.o(i.OS_Sched) for OS_Sched
+    os_task.o(i.OSTaskDel) refers to os_core.o(.data) for OSIntNesting
+    os_task.o(i.OSTaskDel) refers to os_core.o(.bss) for OSTCBPrioTbl
+    os_task.o(i.OSTaskDelReq) refers to os_core.o(.data) for OSTCBCur
+    os_task.o(i.OSTaskDelReq) refers to os_core.o(.bss) for OSTCBPrioTbl
+    os_task.o(i.OSTaskQuery) refers to memcpya.o(.text) for __aeabi_memcpy4
+    os_task.o(i.OSTaskQuery) refers to os_core.o(.data) for OSTCBCur
+    os_task.o(i.OSTaskQuery) refers to os_core.o(.bss) for OSTCBPrioTbl
+    os_task.o(i.OSTaskResume) refers to os_core.o(i.OS_Sched) for OS_Sched
+    os_task.o(i.OSTaskResume) refers to os_core.o(.bss) for OSTCBPrioTbl
+    os_task.o(i.OSTaskResume) refers to os_core.o(.data) for OSRdyGrp
+    os_task.o(i.OSTaskStkChk) refers to os_core.o(.data) for OSTCBCur
+    os_task.o(i.OSTaskStkChk) refers to os_core.o(.bss) for OSTCBPrioTbl
+    os_task.o(i.OSTaskSuspend) refers to os_core.o(i.OS_Sched) for OS_Sched
+    os_task.o(i.OSTaskSuspend) refers to os_core.o(.data) for OSTCBCur
+    os_task.o(i.OSTaskSuspend) refers to os_core.o(.bss) for OSTCBPrioTbl
+    os_time.o(i.OSTimeDly) refers to os_core.o(i.OS_Sched) for OS_Sched
+    os_time.o(i.OSTimeDly) refers to os_core.o(.data) for OSTCBCur
+    os_time.o(i.OSTimeDlyHMSM) refers to os_time.o(i.OSTimeDly) for OSTimeDly
+    os_time.o(i.OSTimeDlyResume) refers to os_core.o(i.OS_Sched) for OS_Sched
+    os_time.o(i.OSTimeDlyResume) refers to os_core.o(.bss) for OSTCBPrioTbl
+    os_time.o(i.OSTimeDlyResume) refers to os_core.o(.data) for OSRdyGrp
+    os_time.o(i.OSTimeGet) refers to os_core.o(.data) for OSTime
+    os_time.o(i.OSTimeSet) refers to os_core.o(.data) for OSTime
+    os_core.o(i.OSInit) refers to osinithookbegin.o(.text) for OSInitHookBegin
+    os_core.o(i.OSInit) refers to os_core.o(i.OS_InitMisc) for OS_InitMisc
+    os_core.o(i.OSInit) refers to os_core.o(i.OS_InitRdyList) for OS_InitRdyList
+    os_core.o(i.OSInit) refers to os_core.o(i.OS_InitTCBList) for OS_InitTCBList
+    os_core.o(i.OSInit) refers to os_core.o(i.OS_InitEventList) for OS_InitEventList
+    os_core.o(i.OSInit) refers to os_flag.o(i.OS_FlagInit) for OS_FlagInit
+    os_core.o(i.OSInit) refers to os_mem.o(i.OS_MemInit) for OS_MemInit
+    os_core.o(i.OSInit) refers to os_q.o(i.OS_QInit) for OS_QInit
+    os_core.o(i.OSInit) refers to os_core.o(i.OS_InitTaskIdle) for OS_InitTaskIdle
+    os_core.o(i.OSInit) refers to os_core.o(i.OS_InitTaskStat) for OS_InitTaskStat
+    os_core.o(i.OSInit) refers to osinithookend.o(.text) for OSInitHookEnd
+    os_core.o(i.OSIntEnter) refers to os_core.o(.data) for OSRunning
+    os_core.o(i.OSIntExit) refers to os_cpu_c.o(i.OSIntCtxSw) for OSIntCtxSw
+    os_core.o(i.OSIntExit) refers to os_core.o(.data) for OSRunning
+    os_core.o(i.OSIntExit) refers to os_core.o(.constdata) for OSUnMapTbl
+    os_core.o(i.OSIntExit) refers to os_core.o(.bss) for OSTCBPrioTbl
+    os_core.o(i.OSSchedLock) refers to os_core.o(.data) for OSRunning
+    os_core.o(i.OSSchedUnlock) refers to os_core.o(i.OS_Sched) for OS_Sched
+    os_core.o(i.OSSchedUnlock) refers to os_core.o(.data) for OSRunning
+    os_core.o(i.OSStart) refers to os_cpu_c.o(i.OSStartHighRdy) for OSStartHighRdy
+    os_core.o(i.OSStart) refers to os_core.o(.data) for OSRunning
+    os_core.o(i.OSStart) refers to os_core.o(.constdata) for OSUnMapTbl
+    os_core.o(i.OSStart) refers to os_core.o(.bss) for OSTCBPrioTbl
+    os_core.o(i.OSStatInit) refers to os_time.o(i.OSTimeDly) for OSTimeDly
+    os_core.o(i.OSStatInit) refers to os_core.o(.data) for OSIdleCtr
+    os_core.o(i.OSTimeTick) refers to ostimetickhook.o(.text) for OSTimeTickHook
+    os_core.o(i.OSTimeTick) refers to os_core.o(.data) for OSTime
+    os_core.o(i.OS_EventTO) refers to os_core.o(.data) for OSTCBCur
+    os_core.o(i.OS_EventTaskRdy) refers to os_core.o(.constdata) for OSUnMapTbl
+    os_core.o(i.OS_EventTaskRdy) refers to os_core.o(.bss) for OSTCBPrioTbl
+    os_core.o(i.OS_EventTaskRdy) refers to os_core.o(.data) for OSRdyGrp
+    os_core.o(i.OS_EventTaskWait) refers to os_core.o(.data) for OSTCBCur
+    os_core.o(i.OS_InitEventList) refers to os_core.o(.bss) for OSEventTbl
+    os_core.o(i.OS_InitEventList) refers to os_core.o(.data) for OSEventFreeList
+    os_core.o(i.OS_InitMisc) refers to os_core.o(.data) for OSTime
+    os_core.o(i.OS_InitRdyList) refers to os_core.o(.data) for OSRdyGrp
+    os_core.o(i.OS_InitTCBList) refers to os_core.o(.data) for OSTCBList
+    os_core.o(i.OS_InitTCBList) refers to os_core.o(.bss) for OSTCBPrioTbl
+    os_core.o(i.OS_InitTaskIdle) refers to os_task.o(i.OSTaskCreateExt) for OSTaskCreateExt
+    os_core.o(i.OS_InitTaskIdle) refers to os_core.o(.bss) for OSTaskIdleStk
+    os_core.o(i.OS_InitTaskIdle) refers to os_core.o(i.OS_TaskIdle) for OS_TaskIdle
+    os_core.o(i.OS_InitTaskStat) refers to os_task.o(i.OSTaskCreateExt) for OSTaskCreateExt
+    os_core.o(i.OS_InitTaskStat) refers to os_core.o(.bss) for OSTaskStatStk
+    os_core.o(i.OS_InitTaskStat) refers to os_core.o(i.OS_TaskStat) for OS_TaskStat
+    os_core.o(i.OS_Sched) refers to os_core.o(.data) for OSIntNesting
+    os_core.o(i.OS_Sched) refers to os_core.o(.constdata) for OSUnMapTbl
+    os_core.o(i.OS_Sched) refers to os_core.o(.bss) for OSTCBPrioTbl
+    os_core.o(i.OS_TCBInit) refers to ostcbinithook.o(.text) for OSTCBInitHook
+    os_core.o(i.OS_TCBInit) refers to ostaskcreatehook.o(.text) for OSTaskCreateHook
+    os_core.o(i.OS_TCBInit) refers to os_core.o(.data) for OSTCBFreeList
+    os_core.o(i.OS_TCBInit) refers to os_core.o(.constdata) for OSMapTbl
+    os_core.o(i.OS_TCBInit) refers to os_core.o(.bss) for OSTCBPrioTbl
+    os_core.o(i.OS_TaskIdle) refers to ostaskidlehook.o(.text) for OSTaskIdleHook
+    os_core.o(i.OS_TaskIdle) refers to os_core.o(.data) for OSIdleCtr
+    os_core.o(i.OS_TaskStat) refers to os_time.o(i.OSTimeDly) for OSTimeDly
+    os_core.o(i.OS_TaskStat) refers to ostaskstathook.o(.text) for OSTaskStatHook
+    os_core.o(i.OS_TaskStat) refers to os_core.o(.data) for OSStatRdy
+    os_q.o(i.OSQCreate) refers to os_core.o(i.OS_EventWaitListInit) for OS_EventWaitListInit
+    os_q.o(i.OSQCreate) refers to os_core.o(.data) for OSIntNesting
+    os_q.o(i.OSQDel) refers to os_core.o(i.OS_EventTaskRdy) for OS_EventTaskRdy
+    os_q.o(i.OSQDel) refers to os_core.o(i.OS_Sched) for OS_Sched
+    os_q.o(i.OSQDel) refers to os_core.o(.data) for OSIntNesting
+    os_q.o(i.OSQPend) refers to os_core.o(i.OS_EventTaskWait) for OS_EventTaskWait
+    os_q.o(i.OSQPend) refers to os_core.o(i.OS_Sched) for OS_Sched
+    os_q.o(i.OSQPend) refers to os_core.o(i.OS_EventTO) for OS_EventTO
+    os_q.o(i.OSQPend) refers to os_core.o(.data) for OSIntNesting
+    os_q.o(i.OSQPost) refers to os_core.o(i.OS_EventTaskRdy) for OS_EventTaskRdy
+    os_q.o(i.OSQPost) refers to os_core.o(i.OS_Sched) for OS_Sched
+    os_q.o(i.OSQPostFront) refers to os_core.o(i.OS_EventTaskRdy) for OS_EventTaskRdy
+    os_q.o(i.OSQPostFront) refers to os_core.o(i.OS_Sched) for OS_Sched
+    os_q.o(i.OSQPostOpt) refers to os_core.o(i.OS_EventTaskRdy) for OS_EventTaskRdy
+    os_q.o(i.OSQPostOpt) refers to os_core.o(i.OS_Sched) for OS_Sched
+    os_q.o(i.OS_QInit) refers to os_core.o(.bss) for OSQTbl
+    os_q.o(i.OS_QInit) refers to os_core.o(.data) for OSQFreeList
+    os_flag.o(i.OSFlagCreate) refers to os_core.o(.data) for OSIntNesting
+    os_flag.o(i.OSFlagDel) refers to os_flag.o(i.OS_FlagTaskRdy) for OS_FlagTaskRdy
+    os_flag.o(i.OSFlagDel) refers to os_core.o(i.OS_Sched) for OS_Sched
+    os_flag.o(i.OSFlagDel) refers to os_core.o(.data) for OSIntNesting
+    os_flag.o(i.OSFlagPend) refers to os_flag.o(i.OS_FlagBlock) for OS_FlagBlock
+    os_flag.o(i.OSFlagPend) refers to os_core.o(i.OS_Sched) for OS_Sched
+    os_flag.o(i.OSFlagPend) refers to os_flag.o(i.OS_FlagUnlink) for OS_FlagUnlink
+    os_flag.o(i.OSFlagPend) refers to os_core.o(.data) for OSIntNesting
+    os_flag.o(i.OSFlagPost) refers to os_flag.o(i.OS_FlagTaskRdy) for OS_FlagTaskRdy
+    os_flag.o(i.OSFlagPost) refers to os_core.o(i.OS_Sched) for OS_Sched
+    os_flag.o(i.OS_FlagBlock) refers to os_core.o(.data) for OSTCBCur
+    os_flag.o(i.OS_FlagInit) refers to os_core.o(.bss) for OSFlagTbl
+    os_flag.o(i.OS_FlagInit) refers to os_core.o(.data) for OSFlagFreeList
+    os_flag.o(i.OS_FlagTaskRdy) refers to os_flag.o(i.OS_FlagUnlink) for OS_FlagUnlink
+    os_flag.o(i.OS_FlagTaskRdy) refers to os_core.o(.data) for OSRdyGrp
+    os_mem.o(i.OSMemCreate) refers to os_core.o(.data) for OSMemFreeList
+    os_mem.o(i.OS_MemInit) refers to os_core.o(.bss) for OSMemTbl
+    os_mem.o(i.OS_MemInit) refers to os_core.o(.data) for OSMemFreeList
+    os_cpu_c.o(.emb_text) refers to ostaskswhook.o(.text) for OSTaskSwHook
+    os_cpu_c.o(.emb_text) refers to os_core.o(.data) for OSRunning
+    os_cpu_c.o(.emb_text) refers to os_cpu_c.o(.data) for __GuiOsEnterSum
+    os_cpu_c.o(.emb_text) refers to os_task.o(i.OSTaskDel) for OSTaskDel
+    os_cpu_c.o(i.OSStartHighRdy) refers to os_cpu_c.o(.emb_text) for __OSStartHighRdy
+    os_cpu_c.o(i.OSTaskStkInit) refers to os_cpu_c.o(.emb_text) for taskEntry
+    os_cpu_c.o(i.SysTick_Handler) refers to os_core.o(i.OSIntEnter) for OSIntEnter
+    os_cpu_c.o(i.SysTick_Handler) refers to os_core.o(i.OSTimeTick) for OSTimeTick
+    os_cpu_c.o(i.SysTick_Handler) refers to os_core.o(i.OSIntExit) for OSIntExit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    ddiv.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    dfltui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfltui.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dfixui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixui.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_lpc17xx.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_lpc17xx.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(i.main) for main
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing core_cm3.o(.emb_text), (32 bytes).
+    Removing startup_lpc17xx.o(HEAP), (0 bytes).
+    Removing main.o(i.Delay1Us), (16 bytes).
+    Removing main.o(i.Open_Delay), (28 bytes).
+    Removing main.o(i.TASK_SHOW), (32 bytes).
+    Removing uart.o(i.UART0_Init), (196 bytes).
+    Removing uart.o(i.UART0_SendByte), (36 bytes).
+    Removing uart.o(i.UART0_SendStr), (24 bytes).
+    Removing uart.o(i.UART1_Init), (244 bytes).
+    Removing uart.o(i.UART1_SendByte), (36 bytes).
+    Removing uart.o(i.UART1_SendStr), (24 bytes).
+    Removing uart.o(i.UART2_SendStr), (24 bytes).
+    Removing uart.o(i.UART3_Init), (236 bytes).
+    Removing uart.o(i.UART3_SendByte), (36 bytes).
+    Removing uart.o(i.UART3_SendStr), (24 bytes).
+    Removing modbus.o(i.modbus0_ask03), (112 bytes).
+    Removing modbus.o(i.modbus0_err_reply), (94 bytes).
+    Removing modbus.o(i.modbus0_listen), (600 bytes).
+    Removing modbus.o(i.modbus0_read03), (156 bytes).
+    Removing modbus.o(i.modbus0_read05), (156 bytes).
+    Removing modbus.o(i.modbus0_read06), (156 bytes).
+    Removing modbus.o(i.modbus0_read16), (156 bytes).
+    Removing modbus.o(i.modbus0_reply), (490 bytes).
+    Removing modbus.o(i.modbus0_set05), (112 bytes).
+    Removing modbus.o(i.modbus0_set06), (112 bytes).
+    Removing modbus.o(i.modbus0_set16), (166 bytes).
+    Removing modbus.o(i.modbus1_ask03), (112 bytes).
+    Removing modbus.o(i.modbus1_err_reply), (94 bytes).
+    Removing modbus.o(i.modbus1_listen), (600 bytes).
+    Removing modbus.o(i.modbus1_read03), (156 bytes).
+    Removing modbus.o(i.modbus1_read05), (156 bytes).
+    Removing modbus.o(i.modbus1_read06), (156 bytes).
+    Removing modbus.o(i.modbus1_read16), (156 bytes).
+    Removing modbus.o(i.modbus1_reply), (490 bytes).
+    Removing modbus.o(i.modbus1_set05), (112 bytes).
+    Removing modbus.o(i.modbus1_set06), (112 bytes).
+    Removing modbus.o(i.modbus1_set16), (166 bytes).
+    Removing modbus.o(i.modbus2_ask03), (112 bytes).
+    Removing modbus.o(i.modbus2_read03), (156 bytes).
+    Removing modbus.o(i.modbus2_read05), (156 bytes).
+    Removing modbus.o(i.modbus2_read06), (156 bytes).
+    Removing modbus.o(i.modbus2_read16), (156 bytes).
+    Removing modbus.o(i.modbus2_set05), (112 bytes).
+    Removing modbus.o(i.modbus2_set06), (112 bytes).
+    Removing modbus.o(i.modbus2_set16), (166 bytes).
+    Removing modbus.o(i.modbus3_ask03), (112 bytes).
+    Removing modbus.o(i.modbus3_err_reply), (94 bytes).
+    Removing modbus.o(i.modbus3_listen), (600 bytes).
+    Removing modbus.o(i.modbus3_read03), (156 bytes).
+    Removing modbus.o(i.modbus3_read05), (156 bytes).
+    Removing modbus.o(i.modbus3_read06), (156 bytes).
+    Removing modbus.o(i.modbus3_read16), (156 bytes).
+    Removing modbus.o(i.modbus3_reply), (490 bytes).
+    Removing modbus.o(i.modbus3_set05), (112 bytes).
+    Removing modbus.o(i.modbus3_set06), (112 bytes).
+    Removing modbus.o(i.modbus3_set16), (166 bytes).
+    Removing task_setup.o(i.TASK_SETUP), (108 bytes).
+    Removing task_setup.o(.bss), (1024 bytes).
+    Removing os_sem.o(i.OSSemAccept), (44 bytes).
+    Removing os_sem.o(i.OSSemDel), (180 bytes).
+    Removing os_sem.o(i.OSSemQuery), (112 bytes).
+    Removing os_task.o(i.OSTaskChangePrio), (332 bytes).
+    Removing os_task.o(i.OSTaskCreate), (160 bytes).
+    Removing os_task.o(i.OSTaskDelReq), (92 bytes).
+    Removing os_task.o(i.OSTaskQuery), (76 bytes).
+    Removing os_task.o(i.OSTaskResume), (140 bytes).
+    Removing os_task.o(i.OSTaskStkChk), (128 bytes).
+    Removing os_task.o(i.OSTaskSuspend), (160 bytes).
+    Removing os_time.o(i.OSTimeDlyHMSM), (158 bytes).
+    Removing os_time.o(i.OSTimeDlyResume), (128 bytes).
+    Removing os_time.o(i.OSTimeGet), (24 bytes).
+    Removing os_time.o(i.OSTimeSet), (24 bytes).
+    Removing os_core.o(i.OSSchedLock), (44 bytes).
+    Removing os_core.o(i.OSSchedUnlock), (80 bytes).
+    Removing os_core.o(i.OSStatInit), (68 bytes).
+    Removing os_core.o(i.OSVersion), (4 bytes).
+    Removing os_q.o(i.OSQAccept), (70 bytes).
+    Removing os_q.o(i.OSQCreate), (140 bytes).
+    Removing os_q.o(i.OSQDel), (216 bytes).
+    Removing os_q.o(i.OSQFlush), (46 bytes).
+    Removing os_q.o(i.OSQPend), (216 bytes).
+    Removing os_q.o(i.OSQPost), (110 bytes).
+    Removing os_q.o(i.OSQPostFront), (112 bytes).
+    Removing os_q.o(i.OSQPostOpt), (172 bytes).
+    Removing os_q.o(i.OSQQuery), (148 bytes).
+    Removing os_flag.o(i.OSFlagAccept), (260 bytes).
+    Removing os_flag.o(i.OSFlagCreate), (80 bytes).
+    Removing os_flag.o(i.OSFlagDel), (188 bytes).
+    Removing os_flag.o(i.OSFlagPend), (508 bytes).
+    Removing os_flag.o(i.OSFlagPost), (270 bytes).
+    Removing os_flag.o(i.OSFlagQuery), (48 bytes).
+    Removing os_flag.o(i.OS_FlagBlock), (136 bytes).
+    Removing os_flag.o(i.OS_FlagTaskRdy), (100 bytes).
+    Removing os_mem.o(i.OSMemCreate), (144 bytes).
+    Removing os_mem.o(i.OSMemGet), (60 bytes).
+    Removing os_mem.o(i.OSMemPut), (58 bytes).
+    Removing os_mem.o(i.OSMemQuery), (58 bytes).
+
+97 unused section(s) (total 15270 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      204  startup_lpc17xx.o(RESET)
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixui.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dfltui.o ABSOLUTE
+    CM3\\core_cm3.c                          0x00000000   Number         0  core_cm3.o ABSOLUTE
+    CM3\core_cm3.c                           0x00000000   Number         0  core_cm3.o ABSOLUTE
+    LPC17xx\Startup\startup_LPC17xx.s        0x00000000   Number         0  startup_lpc17xx.o ABSOLUTE
+    LPC17xx\system_LPC17xx.c                 0x00000000   Number         0  system_lpc17xx.o ABSOLUTE
+    USER_CODE\IO.c                           0x00000000   Number         0  io.o ABSOLUTE
+    USER_CODE\main.c                         0x00000000   Number         0  main.o ABSOLUTE
+    USER_CODE\modbus.c                       0x00000000   Number         0  modbus.o ABSOLUTE
+    USER_CODE\task_modbus.c                  0x00000000   Number         0  task_modbus.o ABSOLUTE
+    USER_CODE\task_setup.c                   0x00000000   Number         0  task_setup.o ABSOLUTE
+    USER_CODE\uart.c                         0x00000000   Number         0  uart.o ABSOLUTE
+    USER_CODE\watchdog.c                     0x00000000   Number         0  watchdog.o ABSOLUTE
+    ZY_CODE\uCOS-II\hook\OSInitHookBegin.c   0x00000000   Number         0  osinithookbegin.o ABSOLUTE
+    ZY_CODE\uCOS-II\hook\OSInitHookEnd.c     0x00000000   Number         0  osinithookend.o ABSOLUTE
+    ZY_CODE\uCOS-II\hook\OSTCBInitHook.c     0x00000000   Number         0  ostcbinithook.o ABSOLUTE
+    ZY_CODE\uCOS-II\hook\OSTaskCreateHook.c  0x00000000   Number         0  ostaskcreatehook.o ABSOLUTE
+    ZY_CODE\uCOS-II\hook\OSTaskDelHook.c     0x00000000   Number         0  ostaskdelhook.o ABSOLUTE
+    ZY_CODE\uCOS-II\hook\OSTaskIdleHook.c    0x00000000   Number         0  ostaskidlehook.o ABSOLUTE
+    ZY_CODE\uCOS-II\hook\OSTaskStatHook.c    0x00000000   Number         0  ostaskstathook.o ABSOLUTE
+    ZY_CODE\uCOS-II\hook\OSTaskSwHook.c      0x00000000   Number         0  ostaskswhook.o ABSOLUTE
+    ZY_CODE\uCOS-II\hook\OSTimeTickHook.c    0x00000000   Number         0  ostimetickhook.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    uCOS-II\OS_CORE.C                        0x00000000   Number         0  os_core.o ABSOLUTE
+    uCOS-II\OS_FLAG.C                        0x00000000   Number         0  os_flag.o ABSOLUTE
+    uCOS-II\OS_MEM.C                         0x00000000   Number         0  os_mem.o ABSOLUTE
+    uCOS-II\OS_Q.C                           0x00000000   Number         0  os_q.o ABSOLUTE
+    uCOS-II\OS_SEM.C                         0x00000000   Number         0  os_sem.o ABSOLUTE
+    uCOS-II\OS_TASK.C                        0x00000000   Number         0  os_task.o ABSOLUTE
+    uCOS-II\OS_TIME.C                        0x00000000   Number         0  os_time.o ABSOLUTE
+    uCOS-II\\cpu\\Os_cpu_c.c                 0x00000000   Number         0  os_cpu_c.o ABSOLUTE
+    uCOS-II\cpu\Os_cpu_c.c                   0x00000000   Number         0  os_cpu_c.o ABSOLUTE
+    .ARM.Collect$$$$00000000                 0x000000cc   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x000000cc   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x000000d0   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x000000d4   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x000000d4   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x000000d4   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x000000dc   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x000000dc   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x000000dc   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x000000dc   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .emb_text                                0x000000e0   Section      298  os_cpu_c.o(.emb_text)
+    .text                                    0x0000020c   Section       28  startup_lpc17xx.o(.text)
+    .text                                    0x00000228   Section        0  osinithookbegin.o(.text)
+    .text                                    0x0000022a   Section        0  osinithookend.o(.text)
+    .text                                    0x0000022c   Section        0  ostaskcreatehook.o(.text)
+    .text                                    0x00000230   Section        0  ostaskdelhook.o(.text)
+    .text                                    0x00000234   Section        0  ostaskidlehook.o(.text)
+    .text                                    0x00000236   Section        0  ostaskstathook.o(.text)
+    .text                                    0x00000238   Section        0  ostcbinithook.o(.text)
+    .text                                    0x0000023c   Section        0  ostimetickhook.o(.text)
+    .text                                    0x0000023e   Section        0  ostaskswhook.o(.text)
+    .text                                    0x00000240   Section        0  memseta.o(.text)
+    .text                                    0x00000264   Section        0  dfltui.o(.text)
+    .text                                    0x0000027e   Section        0  dfixui.o(.text)
+    .text                                    0x000002b0   Section        0  llushr.o(.text)
+    .text                                    0x000002d0   Section        0  iusefp.o(.text)
+    .text                                    0x000002d0   Section       36  init.o(.text)
+    i.OS_Dummy                               0x000002f4   Section        0  os_core.o(i.OS_Dummy)
+    i.__scatterload_null                     0x000002f6   Section        2  handlers.o(i.__scatterload_null)
+    .ARM.__at_0x02FC                         0x000002fc   Section        4  startup_lpc17xx.o(.ARM.__at_0x02FC)
+    .text                                    0x00000300   Section        0  ddiv.o(.text)
+    .text                                    0x000003de   Section        0  depilogue.o(.text)
+    .text                                    0x0000049c   Section        0  llshl.o(.text)
+    i.Delay10kUs                             0x000004ba   Section        0  main.o(i.Delay10kUs)
+    i.IO_InputScan                           0x000004cc   Section        0  io.o(i.IO_InputScan)
+    i.IO_OutputCtrl                          0x00000540   Section        0  io.o(i.IO_OutputCtrl)
+    i.IO_ReadMute                            0x000006e8   Section        0  io.o(i.IO_ReadMute)
+    i.IO_ReadSwitch                          0x00000740   Section        0  io.o(i.IO_ReadSwitch)
+    i.IO_init                                0x00000780   Section        0  io.o(i.IO_init)
+    i.NVIC_EnableIRQ                         0x00000854   Section        0  uart.o(i.NVIC_EnableIRQ)
+    NVIC_EnableIRQ                           0x00000855   Thumb Code    24  uart.o(i.NVIC_EnableIRQ)
+    i.NVIC_SetPriority                       0x0000086c   Section        0  uart.o(i.NVIC_SetPriority)
+    NVIC_SetPriority                         0x0000086d   Thumb Code    32  uart.o(i.NVIC_SetPriority)
+    i.OSInit                                 0x00000894   Section        0  os_core.o(i.OSInit)
+    i.OSIntCtxSw                             0x000008c4   Section        0  os_cpu_c.o(i.OSIntCtxSw)
+    i.OSIntEnter                             0x000008d4   Section        0  os_core.o(i.OSIntEnter)
+    i.OSIntExit                              0x000008f8   Section        0  os_core.o(i.OSIntExit)
+    i.OSSemCreate                            0x000009a4   Section        0  os_sem.o(i.OSSemCreate)
+    i.OSSemPend                              0x000009ec   Section        0  os_sem.o(i.OSSemPend)
+    i.OSSemPost                              0x00000a98   Section        0  os_sem.o(i.OSSemPost)
+    i.OSStart                                0x00000aec   Section        0  os_core.o(i.OSStart)
+    i.OSStartHighRdy                         0x00000b54   Section        0  os_cpu_c.o(i.OSStartHighRdy)
+    i.OSTaskCreateExt                        0x00000ba0   Section        0  os_task.o(i.OSTaskCreateExt)
+    i.OSTaskDel                              0x00000c5c   Section        0  os_task.o(i.OSTaskDel)
+    i.OSTaskStkInit                          0x00000da4   Section        0  os_cpu_c.o(i.OSTaskStkInit)
+    i.OSTimeDly                              0x00000e20   Section        0  os_time.o(i.OSTimeDly)
+    i.OSTimeTick                             0x00000e80   Section        0  os_core.o(i.OSTimeTick)
+    i.OS_EventTO                             0x00000f14   Section        0  os_core.o(i.OS_EventTO)
+    i.OS_EventTaskRdy                        0x00000f60   Section        0  os_core.o(i.OS_EventTaskRdy)
+    i.OS_EventTaskWait                       0x00001028   Section        0  os_core.o(i.OS_EventTaskWait)
+    i.OS_EventWaitListInit                   0x000010a8   Section        0  os_core.o(i.OS_EventWaitListInit)
+    i.OS_FlagInit                            0x000010d4   Section        0  os_flag.o(i.OS_FlagInit)
+    i.OS_FlagUnlink                          0x00001108   Section        0  os_flag.o(i.OS_FlagUnlink)
+    i.OS_InitEventList                       0x0000112c   Section        0  os_core.o(i.OS_InitEventList)
+    OS_InitEventList                         0x0000112d   Thumb Code    44  os_core.o(i.OS_InitEventList)
+    i.OS_InitMisc                            0x00001160   Section        0  os_core.o(i.OS_InitMisc)
+    OS_InitMisc                              0x00001161   Thumb Code    44  os_core.o(i.OS_InitMisc)
+    i.OS_InitRdyList                         0x000011b4   Section        0  os_core.o(i.OS_InitRdyList)
+    OS_InitRdyList                           0x000011b5   Thumb Code    46  os_core.o(i.OS_InitRdyList)
+    i.OS_InitTCBList                         0x000011fc   Section        0  os_core.o(i.OS_InitTCBList)
+    OS_InitTCBList                           0x000011fd   Thumb Code    64  os_core.o(i.OS_InitTCBList)
+    i.OS_InitTaskIdle                        0x0000124c   Section        0  os_core.o(i.OS_InitTaskIdle)
+    OS_InitTaskIdle                          0x0000124d   Thumb Code    42  os_core.o(i.OS_InitTaskIdle)
+    i.OS_InitTaskStat                        0x00001284   Section        0  os_core.o(i.OS_InitTaskStat)
+    OS_InitTaskStat                          0x00001285   Thumb Code    42  os_core.o(i.OS_InitTaskStat)
+    i.OS_MemInit                             0x000012bc   Section        0  os_mem.o(i.OS_MemInit)
+    i.OS_QInit                               0x00001300   Section        0  os_q.o(i.OS_QInit)
+    i.OS_Sched                               0x00001330   Section        0  os_core.o(i.OS_Sched)
+    i.OS_TCBInit                             0x000013b0   Section        0  os_core.o(i.OS_TCBInit)
+    i.OS_TaskIdle                            0x000014a4   Section        0  os_core.o(i.OS_TaskIdle)
+    i.OS_TaskStat                            0x000014c4   Section        0  os_core.o(i.OS_TaskStat)
+    i.ReadInput                              0x00001550   Section        0  io.o(i.ReadInput)
+    i.SysTick_Handler                        0x00001600   Section        0  os_cpu_c.o(i.SysTick_Handler)
+    i.SystemInit                             0x00001618   Section        0  system_lpc17xx.o(i.SystemInit)
+    i.TASK_IO                                0x00001834   Section        0  main.o(i.TASK_IO)
+    i.TASK_MODBUS1_SLAVE                     0x00001988   Section        0  task_modbus.o(i.TASK_MODBUS1_SLAVE)
+    i.TASK_TIME                              0x00001a20   Section        0  task_modbus.o(i.TASK_TIME)
+    i.TASK_TIMER                             0x00001a2c   Section        0  main.o(i.TASK_TIMER)
+    i.TIME_PROCESS                           0x00001acc   Section        0  uart.o(i.TIME_PROCESS)
+    i.UART0_IRQHandler                       0x00001be0   Section        0  uart.o(i.UART0_IRQHandler)
+    i.UART1_IRQHandler                       0x00001c98   Section        0  uart.o(i.UART1_IRQHandler)
+    i.UART2_IRQHandler                       0x00001d50   Section        0  uart.o(i.UART2_IRQHandler)
+    i.UART2_Init                             0x00001e08   Section        0  uart.o(i.UART2_Init)
+    i.UART2_SendByte                         0x00001ee8   Section        0  uart.o(i.UART2_SendByte)
+    i.UART3_IRQHandler                       0x00001f0c   Section        0  uart.o(i.UART3_IRQHandler)
+    i.__scatterload_copy                     0x00001fc4   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_zeroinit                 0x00001fd2   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.crc16                                  0x00001fe0   Section        0  modbus.o(i.crc16)
+    i.crc_detect                             0x00002018   Section        0  modbus.o(i.crc_detect)
+    i.main                                   0x00002050   Section        0  main.o(i.main)
+    i.modbus1_updata                         0x00002160   Section        0  main.o(i.modbus1_updata)
+    i.modbus2_err_reply                      0x000021bc   Section        0  modbus.o(i.modbus2_err_reply)
+    i.modbus2_listen                         0x0000221c   Section        0  modbus.o(i.modbus2_listen)
+    i.modbus2_reply                          0x00002480   Section        0  modbus.o(i.modbus2_reply)
+    i.uart0_timeout_8byte_start              0x0000266c   Section        0  uart.o(i.uart0_timeout_8byte_start)
+    i.uart0_timeout_8byte_stop               0x00002684   Section        0  uart.o(i.uart0_timeout_8byte_stop)
+    i.uart1_timeout_8byte_start              0x000026a0   Section        0  uart.o(i.uart1_timeout_8byte_start)
+    i.uart1_timeout_8byte_stop               0x000026b8   Section        0  uart.o(i.uart1_timeout_8byte_stop)
+    i.uart2_timeout_8byte_start              0x000026d4   Section        0  uart.o(i.uart2_timeout_8byte_start)
+    i.uart2_timeout_8byte_stop               0x000026ec   Section        0  uart.o(i.uart2_timeout_8byte_stop)
+    i.uart3_timeout_8byte_start              0x00002708   Section        0  uart.o(i.uart3_timeout_8byte_start)
+    i.uart3_timeout_8byte_stop               0x00002720   Section        0  uart.o(i.uart3_timeout_8byte_stop)
+    i.wdt_feed                               0x0000273c   Section        0  watchdog.o(i.wdt_feed)
+    i.wdt_init                               0x00002750   Section        0  watchdog.o(i.wdt_init)
+    .constdata                               0x0000276a   Section      512  modbus.o(.constdata)
+    .constdata                               0x0000296a   Section      264  os_core.o(.constdata)
+    .data                                    0x10000000   Section        4  system_lpc17xx.o(.data)
+    .data                                    0x10000004   Section       64  main.o(.data)
+    .data                                    0x10000044   Section       40  uart.o(.data)
+    .data                                    0x1000006c   Section        7  io.o(.data)
+    cnt_p                                    0x1000006c   Data           1  io.o(.data)
+    flag                                     0x1000006d   Data           1  io.o(.data)
+    cnt                                      0x1000006e   Data           4  io.o(.data)
+    .data                                    0x10000074   Section        2  modbus.o(.data)
+    .data                                    0x10000078   Section       76  os_core.o(.data)
+    .data                                    0x100000c4   Section        4  os_cpu_c.o(.data)
+    .bss                                     0x100000c8   Section     5312  main.o(.bss)
+    .bss                                     0x10001588   Section       48  uart.o(.bss)
+    .bss                                     0x100015b8   Section       26  io.o(.bss)
+    cnt_p                                    0x100015b8   Data          13  io.o(.bss)
+    cnt_n                                    0x100015c5   Data          13  io.o(.bss)
+    .bss                                     0x100015d2   Section      180  modbus.o(.bss)
+    .bss                                     0x10001688   Section     2112  task_modbus.o(.bss)
+    .bss                                     0x10001ec8   Section     5304  os_core.o(.bss)
+    STACK                                    0x10003380   Section      512  startup_lpc17xx.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __Vectors                                0x00000000   Data           4  startup_lpc17xx.o(RESET)
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __main                                   0x000000cd   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x000000cd   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x000000d1   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x000000d5   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x000000d5   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x000000d5   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x000000d5   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x000000dd   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x000000dd   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    SVC_Handler                              0x000000e1   Thumb Code    36  os_cpu_c.o(.emb_text)
+    __OSStartHighRdy                         0x00000105   Thumb Code    10  os_cpu_c.o(.emb_text)
+    __s_OSStartHighRdy                       0x0000010f   Thumb Code    42  os_cpu_c.o(.emb_text)
+    PendSV_Handler                           0x00000149   Thumb Code    80  os_cpu_c.o(.emb_text)
+    __s_OS_ENTER_CRITICAL                    0x000001ad   Thumb Code    28  os_cpu_c.o(.emb_text)
+    __s_OS_EXIT_CRITICAL                     0x000001cd   Thumb Code    28  os_cpu_c.o(.emb_text)
+    __s_changeToSYSMode                      0x000001ed   Thumb Code    10  os_cpu_c.o(.emb_text)
+    changeToUSRMode                          0x000001f7   Thumb Code    10  os_cpu_c.o(.emb_text)
+    taskEntry                                0x00000201   Thumb Code    10  os_cpu_c.o(.emb_text)
+    Reset_Handler                            0x0000020d   Thumb Code     4  startup_lpc17xx.o(.text)
+    NMI_Handler                              0x00000211   Thumb Code     2  startup_lpc17xx.o(.text)
+    HardFault_Handler                        0x00000213   Thumb Code     2  startup_lpc17xx.o(.text)
+    MemManage_Handler                        0x00000215   Thumb Code     2  startup_lpc17xx.o(.text)
+    BusFault_Handler                         0x00000217   Thumb Code     2  startup_lpc17xx.o(.text)
+    UsageFault_Handler                       0x00000219   Thumb Code     2  startup_lpc17xx.o(.text)
+    DebugMon_Handler                         0x0000021d   Thumb Code     2  startup_lpc17xx.o(.text)
+    ADC_IRQHandler                           0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    BOD_IRQHandler                           0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    CANActivity_IRQHandler                   0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    CAN_IRQHandler                           0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    DMA_IRQHandler                           0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    EINT0_IRQHandler                         0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    EINT1_IRQHandler                         0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    EINT2_IRQHandler                         0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    EINT3_IRQHandler                         0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    ENET_IRQHandler                          0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    I2C0_IRQHandler                          0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    I2C1_IRQHandler                          0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    I2C2_IRQHandler                          0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    I2S_IRQHandler                           0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    MCPWM_IRQHandler                         0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    PLL0_IRQHandler                          0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    PLL1_IRQHandler                          0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    PWM1_IRQHandler                          0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    QEI_IRQHandler                           0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    RIT_IRQHandler                           0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    RTC_IRQHandler                           0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    SPI_IRQHandler                           0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    SSP0_IRQHandler                          0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    SSP1_IRQHandler                          0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    TIMER0_IRQHandler                        0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    TIMER1_IRQHandler                        0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    TIMER2_IRQHandler                        0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    TIMER3_IRQHandler                        0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    USBActivity_IRQHandler                   0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    USB_IRQHandler                           0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    WDT_IRQHandler                           0x00000223   Thumb Code     0  startup_lpc17xx.o(.text)
+    OSInitHookBegin                          0x00000229   Thumb Code     2  osinithookbegin.o(.text)
+    OSInitHookEnd                            0x0000022b   Thumb Code     2  osinithookend.o(.text)
+    OSTaskCreateHook                         0x0000022d   Thumb Code     4  ostaskcreatehook.o(.text)
+    OSTaskDelHook                            0x00000231   Thumb Code     4  ostaskdelhook.o(.text)
+    OSTaskIdleHook                           0x00000235   Thumb Code     2  ostaskidlehook.o(.text)
+    OSTaskStatHook                           0x00000237   Thumb Code     2  ostaskstathook.o(.text)
+    OSTCBInitHook                            0x00000239   Thumb Code     4  ostcbinithook.o(.text)
+    OSTimeTickHook                           0x0000023d   Thumb Code     2  ostimetickhook.o(.text)
+    OSTaskSwHook                             0x0000023f   Thumb Code     2  ostaskswhook.o(.text)
+    __aeabi_memset                           0x00000241   Thumb Code    14  memseta.o(.text)
+    __aeabi_memset4                          0x00000241   Thumb Code     0  memseta.o(.text)
+    __aeabi_memset8                          0x00000241   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr                           0x0000024f   Thumb Code     4  memseta.o(.text)
+    __aeabi_memclr4                          0x0000024f   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr8                          0x0000024f   Thumb Code     0  memseta.o(.text)
+    _memset$wrapper                          0x00000253   Thumb Code    18  memseta.o(.text)
+    __aeabi_ui2d                             0x00000265   Thumb Code    26  dfltui.o(.text)
+    __aeabi_d2uiz                            0x0000027f   Thumb Code    50  dfixui.o(.text)
+    __aeabi_llsr                             0x000002b1   Thumb Code    32  llushr.o(.text)
+    _ll_ushift_r                             0x000002b1   Thumb Code     0  llushr.o(.text)
+    __I$use$fp                               0x000002d1   Thumb Code     0  iusefp.o(.text)
+    __scatterload                            0x000002d1   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x000002d1   Thumb Code     0  init.o(.text)
+    OS_Dummy                                 0x000002f5   Thumb Code     2  os_core.o(i.OS_Dummy)
+    __scatterload_null                       0x000002f7   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __aeabi_ddiv                             0x00000301   Thumb Code   222  ddiv.o(.text)
+    _double_round                            0x000003df   Thumb Code    26  depilogue.o(.text)
+    _double_epilogue                         0x000003f9   Thumb Code   164  depilogue.o(.text)
+    __aeabi_llsl                             0x0000049d   Thumb Code    30  llshl.o(.text)
+    _ll_shift_l                              0x0000049d   Thumb Code     0  llshl.o(.text)
+    Delay10kUs                               0x000004bb   Thumb Code    18  main.o(i.Delay10kUs)
+    IO_InputScan                             0x000004cd   Thumb Code   108  io.o(i.IO_InputScan)
+    IO_OutputCtrl                            0x00000541   Thumb Code   420  io.o(i.IO_OutputCtrl)
+    IO_ReadMute                              0x000006e9   Thumb Code    70  io.o(i.IO_ReadMute)
+    IO_ReadSwitch                            0x00000741   Thumb Code    60  io.o(i.IO_ReadSwitch)
+    IO_init                                  0x00000781   Thumb Code   208  io.o(i.IO_init)
+    OSInit                                   0x00000895   Thumb Code    48  os_core.o(i.OSInit)
+    OSIntCtxSw                               0x000008c5   Thumb Code    10  os_cpu_c.o(i.OSIntCtxSw)
+    OSIntEnter                               0x000008d5   Thumb Code    28  os_core.o(i.OSIntEnter)
+    OSIntExit                                0x000008f9   Thumb Code   124  os_core.o(i.OSIntExit)
+    OSSemCreate                              0x000009a5   Thumb Code    64  os_sem.o(i.OSSemCreate)
+    OSSemPend                                0x000009ed   Thumb Code   162  os_sem.o(i.OSSemPend)
+    OSSemPost                                0x00000a99   Thumb Code    82  os_sem.o(i.OSSemPost)
+    OSStart                                  0x00000aed   Thumb Code    68  os_core.o(i.OSStart)
+    OSStartHighRdy                           0x00000b55   Thumb Code    66  os_cpu_c.o(i.OSStartHighRdy)
+    OSTaskCreateExt                          0x00000ba1   Thumb Code   176  os_task.o(i.OSTaskCreateExt)
+    OSTaskDel                                0x00000c5d   Thumb Code   292  os_task.o(i.OSTaskDel)
+    OSTaskStkInit                            0x00000da5   Thumb Code   118  os_cpu_c.o(i.OSTaskStkInit)
+    OSTimeDly                                0x00000e21   Thumb Code    82  os_time.o(i.OSTimeDly)
+    OSTimeTick                               0x00000e81   Thumb Code   128  os_core.o(i.OSTimeTick)
+    OS_EventTO                               0x00000f15   Thumb Code    72  os_core.o(i.OS_EventTO)
+    OS_EventTaskRdy                          0x00000f61   Thumb Code   180  os_core.o(i.OS_EventTaskRdy)
+    OS_EventTaskWait                         0x00001029   Thumb Code   114  os_core.o(i.OS_EventTaskWait)
+    OS_EventWaitListInit                     0x000010a9   Thumb Code    42  os_core.o(i.OS_EventWaitListInit)
+    OS_FlagInit                              0x000010d5   Thumb Code    42  os_flag.o(i.OS_FlagInit)
+    OS_FlagUnlink                            0x00001109   Thumb Code    36  os_flag.o(i.OS_FlagUnlink)
+    OS_MemInit                               0x000012bd   Thumb Code    60  os_mem.o(i.OS_MemInit)
+    OS_QInit                                 0x00001301   Thumb Code    38  os_q.o(i.OS_QInit)
+    OS_Sched                                 0x00001331   Thumb Code    88  os_core.o(i.OS_Sched)
+    OS_TCBInit                               0x000013b1   Thumb Code   220  os_core.o(i.OS_TCBInit)
+    OS_TaskIdle                              0x000014a5   Thumb Code    28  os_core.o(i.OS_TaskIdle)
+    OS_TaskStat                              0x000014c5   Thumb Code   118  os_core.o(i.OS_TaskStat)
+    ReadInput                                0x00001551   Thumb Code   172  io.o(i.ReadInput)
+    SysTick_Handler                          0x00001601   Thumb Code    22  os_cpu_c.o(i.SysTick_Handler)
+    SystemInit                               0x00001619   Thumb Code   478  system_lpc17xx.o(i.SystemInit)
+    TASK_IO                                  0x00001835   Thumb Code   294  main.o(i.TASK_IO)
+    TASK_MODBUS1_SLAVE                       0x00001989   Thumb Code   142  task_modbus.o(i.TASK_MODBUS1_SLAVE)
+    TASK_TIME                                0x00001a21   Thumb Code    10  task_modbus.o(i.TASK_TIME)
+    TASK_TIMER                               0x00001a2d   Thumb Code   142  main.o(i.TASK_TIMER)
+    TIME_PROCESS                             0x00001acd   Thumb Code   194  uart.o(i.TIME_PROCESS)
+    UART0_IRQHandler                         0x00001be1   Thumb Code   164  uart.o(i.UART0_IRQHandler)
+    UART1_IRQHandler                         0x00001c99   Thumb Code   164  uart.o(i.UART1_IRQHandler)
+    UART2_IRQHandler                         0x00001d51   Thumb Code   164  uart.o(i.UART2_IRQHandler)
+    UART2_Init                               0x00001e09   Thumb Code   196  uart.o(i.UART2_Init)
+    UART2_SendByte                           0x00001ee9   Thumb Code    28  uart.o(i.UART2_SendByte)
+    UART3_IRQHandler                         0x00001f0d   Thumb Code   164  uart.o(i.UART3_IRQHandler)
+    __scatterload_copy                       0x00001fc5   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_zeroinit                   0x00001fd3   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    crc16                                    0x00001fe1   Thumb Code    48  modbus.o(i.crc16)
+    crc_detect                               0x00002019   Thumb Code    56  modbus.o(i.crc_detect)
+    main                                     0x00002051   Thumb Code   208  main.o(i.main)
+    modbus1_updata                           0x00002161   Thumb Code    76  main.o(i.modbus1_updata)
+    modbus2_err_reply                        0x000021bd   Thumb Code    94  modbus.o(i.modbus2_err_reply)
+    modbus2_listen                           0x0000221d   Thumb Code   594  modbus.o(i.modbus2_listen)
+    modbus2_reply                            0x00002481   Thumb Code   490  modbus.o(i.modbus2_reply)
+    uart0_timeout_8byte_start                0x0000266d   Thumb Code    14  uart.o(i.uart0_timeout_8byte_start)
+    uart0_timeout_8byte_stop                 0x00002685   Thumb Code    16  uart.o(i.uart0_timeout_8byte_stop)
+    uart1_timeout_8byte_start                0x000026a1   Thumb Code    14  uart.o(i.uart1_timeout_8byte_start)
+    uart1_timeout_8byte_stop                 0x000026b9   Thumb Code    16  uart.o(i.uart1_timeout_8byte_stop)
+    uart2_timeout_8byte_start                0x000026d5   Thumb Code    14  uart.o(i.uart2_timeout_8byte_start)
+    uart2_timeout_8byte_stop                 0x000026ed   Thumb Code    16  uart.o(i.uart2_timeout_8byte_stop)
+    uart3_timeout_8byte_start                0x00002709   Thumb Code    14  uart.o(i.uart3_timeout_8byte_start)
+    uart3_timeout_8byte_stop                 0x00002721   Thumb Code    16  uart.o(i.uart3_timeout_8byte_stop)
+    wdt_feed                                 0x0000273d   Thumb Code    20  watchdog.o(i.wdt_feed)
+    wdt_init                                 0x00002751   Thumb Code    26  watchdog.o(i.wdt_init)
+    auchCRCHi                                0x0000276a   Data         256  modbus.o(.constdata)
+    auchCRCLo                                0x0000286a   Data         256  modbus.o(.constdata)
+    OSMapTbl                                 0x0000296a   Data           8  os_core.o(.constdata)
+    OSUnMapTbl                               0x00002972   Data         256  os_core.o(.constdata)
+    Region$$Table$$Base                      0x00002a74   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00002a94   Number         0  anon$$obj.o(Region$$Table)
+    SystemFrequency                          0x10000000   Data           4  system_lpc17xx.o(.data)
+    flash_05s_flag                           0x10000004   Data           1  main.o(.data)
+    flash_1s_flag                            0x10000005   Data           1  main.o(.data)
+    flash_2s_flag                            0x10000006   Data           1  main.o(.data)
+    flash_L3_flag                            0x10000007   Data           1  main.o(.data)
+    upper_cmd                                0x10000008   Data           4  main.o(.data)
+    upper_flag                               0x1000000c   Data           4  main.o(.data)
+    dis_flag                                 0x10000010   Data           1  main.o(.data)
+    beep_cmd                                 0x10000011   Data           1  main.o(.data)
+    input_source                             0x10000014   Data           4  main.o(.data)
+    input_flag                               0x10000018   Data           4  main.o(.data)
+    ctrl_flag                                0x1000001c   Data           4  main.o(.data)
+    output_flag                              0x10000020   Data           4  main.o(.data)
+    test_temp                                0x10000024   Data           4  main.o(.data)
+    tog_sw                                   0x10000028   Data           1  main.o(.data)
+    SLAVE_ADDR1                              0x10000029   Data           1  main.o(.data)
+    RecvUARTFlag0                            0x1000002c   Data           4  main.o(.data)
+    RecvUARTFlag1                            0x10000030   Data           4  main.o(.data)
+    RecvUARTFlag2                            0x10000034   Data           4  main.o(.data)
+    RecvUARTFlag3                            0x10000038   Data           4  main.o(.data)
+    param                                    0x1000003c   Data           8  main.o(.data)
+    send_time_out0                           0x10000044   Data           4  uart.o(.data)
+    send_time_out1                           0x10000048   Data           4  uart.o(.data)
+    send_time_out2                           0x1000004c   Data           4  uart.o(.data)
+    send_time_out3                           0x10000050   Data           4  uart.o(.data)
+    uart0_timeout_start                      0x10000054   Data           1  uart.o(.data)
+    uart0_timeout_cnt                        0x10000055   Data           1  uart.o(.data)
+    uart0_rcv_counter                        0x10000056   Data           2  uart.o(.data)
+    uart1_timeout_start                      0x10000058   Data           1  uart.o(.data)
+    uart1_timeout_cnt                        0x10000059   Data           1  uart.o(.data)
+    uart1_rcv_counter                        0x1000005a   Data           2  uart.o(.data)
+    uart2_timeout_start                      0x1000005c   Data           1  uart.o(.data)
+    uart2_timeout_cnt                        0x1000005d   Data           1  uart.o(.data)
+    uart2_rcv_counter                        0x1000005e   Data           2  uart.o(.data)
+    uart3_timeout_start                      0x10000060   Data           1  uart.o(.data)
+    uart3_timeout_cnt                        0x10000061   Data           1  uart.o(.data)
+    uart3_rcv_counter                        0x10000062   Data           2  uart.o(.data)
+    uart0_receive_num                        0x10000064   Data           2  uart.o(.data)
+    uart1_receive_num                        0x10000066   Data           2  uart.o(.data)
+    uart2_receive_num                        0x10000068   Data           2  uart.o(.data)
+    uart3_receive_num                        0x1000006a   Data           2  uart.o(.data)
+    mute_flag                                0x10000072   Data           1  io.o(.data)
+    subaddr                                  0x10000074   Data           2  modbus.o(.data)
+    OSCtxSwCtr                               0x10000078   Data           4  os_core.o(.data)
+    OSEventFreeList                          0x1000007c   Data           4  os_core.o(.data)
+    OSFlagFreeList                           0x10000080   Data           4  os_core.o(.data)
+    OSCPUUsage                               0x10000084   Data           1  os_core.o(.data)
+    OSIdleCtrMax                             0x10000088   Data           4  os_core.o(.data)
+    OSIdleCtrRun                             0x1000008c   Data           4  os_core.o(.data)
+    OSStatRdy                                0x10000090   Data           1  os_core.o(.data)
+    OSIntNesting                             0x10000091   Data           1  os_core.o(.data)
+    OSIntExitY                               0x10000092   Data           1  os_core.o(.data)
+    OSLockNesting                            0x10000093   Data           1  os_core.o(.data)
+    OSPrioCur                                0x10000094   Data           1  os_core.o(.data)
+    OSPrioHighRdy                            0x10000095   Data           1  os_core.o(.data)
+    OSRdyGrp                                 0x10000096   Data           1  os_core.o(.data)
+    OSRdyTbl                                 0x10000097   Data           8  os_core.o(.data)
+    OSRunning                                0x1000009f   Data           1  os_core.o(.data)
+    OSTaskCtr                                0x100000a0   Data           1  os_core.o(.data)
+    OSIdleCtr                                0x100000a4   Data           4  os_core.o(.data)
+    OSTCBCur                                 0x100000a8   Data           4  os_core.o(.data)
+    OSTCBFreeList                            0x100000ac   Data           4  os_core.o(.data)
+    OSTCBHighRdy                             0x100000b0   Data           4  os_core.o(.data)
+    OSTCBList                                0x100000b4   Data           4  os_core.o(.data)
+    OSMemFreeList                            0x100000b8   Data           4  os_core.o(.data)
+    OSQFreeList                              0x100000bc   Data           4  os_core.o(.data)
+    OSTime                                   0x100000c0   Data           4  os_core.o(.data)
+    __GuiOsEnterSum                          0x100000c4   Data           4  os_cpu_c.o(.data)
+    TASK_IO_STACK                            0x100000c8   Data        1600  main.o(.bss)
+    TASK_APP_STACK                           0x10000708   Data        1600  main.o(.bss)
+    TASK_SHOW_STACK                          0x10000d48   Data        1600  main.o(.bss)
+    TASK_TIMER_STACK                         0x10001388   Data         512  main.o(.bss)
+    uart0_temp                               0x10001588   Data          12  uart.o(.bss)
+    uart1_temp                               0x10001594   Data          12  uart.o(.bss)
+    uart2_temp                               0x100015a0   Data          12  uart.o(.bss)
+    uart3_temp                               0x100015ac   Data          12  uart.o(.bss)
+    modbus0_buf                              0x100015d2   Data          20  modbus.o(.bss)
+    modbus1_buf                              0x100015e6   Data         128  modbus.o(.bss)
+    modbus2_buf                              0x10001666   Data          16  modbus.o(.bss)
+    modbus3_buf                              0x10001676   Data          16  modbus.o(.bss)
+    TASK_TIME_STACK                          0x10001688   Data         512  task_modbus.o(.bss)
+    TASK_MODBUS1_STACK                       0x10001888   Data        1600  task_modbus.o(.bss)
+    OSEventTbl                               0x10001ec8   Data        1088  os_core.o(.bss)
+    OSFlagTbl                                0x10002308   Data         180  os_core.o(.bss)
+    OSTaskStatStk                            0x100023bc   Data        1024  os_core.o(.bss)
+    OSTaskIdleStk                            0x100027bc   Data        1024  os_core.o(.bss)
+    OSTCBPrioTbl                             0x10002bbc   Data         256  os_core.o(.bss)
+    OSTCBTbl                                 0x10002cbc   Data        1144  os_core.o(.bss)
+    OSMemTbl                                 0x10003134   Data         300  os_core.o(.bss)
+    OSQTbl                                   0x10003260   Data         288  os_core.o(.bss)
+    __initial_sp                             0x10003580   Data           0  startup_lpc17xx.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x000000cd
+
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00002b5c, Max: 0x00080000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x00002a94, Max: 0x00080000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x000000cc   Data   RO           19    RESET               startup_lpc17xx.o
+    0x000000cc   0x00000000   Code   RO         1457  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x000000cc   0x00000004   Code   RO         1472    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x000000d0   0x00000004   Code   RO         1475    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x000000d4   0x00000000   Code   RO         1477    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x000000d4   0x00000000   Code   RO         1479    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x000000d4   0x00000008   Code   RO         1480    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x000000dc   0x00000000   Code   RO         1482    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x000000dc   0x00000000   Code   RO         1484    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x000000dc   0x00000004   Code   RO         1473    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x000000e0   0x0000012a   Code   RO         1385    .emb_text           uCOS-II.lib(os_cpu_c.o)
+    0x0000020a   0x00000002   PAD
+    0x0000020c   0x0000001c   Code   RO           21    .text               startup_lpc17xx.o
+    0x00000228   0x00000002   Code   RO         1074    .text               uCOS-II hook.lib(osinithookbegin.o)
+    0x0000022a   0x00000002   Code   RO         1135    .text               uCOS-II hook.lib(osinithookend.o)
+    0x0000022c   0x00000004   Code   RO         1147    .text               uCOS-II hook.lib(ostaskcreatehook.o)
+    0x00000230   0x00000004   Code   RO         1159    .text               uCOS-II hook.lib(ostaskdelhook.o)
+    0x00000234   0x00000002   Code   RO         1171    .text               uCOS-II hook.lib(ostaskidlehook.o)
+    0x00000236   0x00000002   Code   RO         1183    .text               uCOS-II hook.lib(ostaskstathook.o)
+    0x00000238   0x00000004   Code   RO         1195    .text               uCOS-II hook.lib(ostcbinithook.o)
+    0x0000023c   0x00000002   Code   RO         1207    .text               uCOS-II hook.lib(ostimetickhook.o)
+    0x0000023e   0x00000002   Code   RO         1445    .text               uCOS-II hook.lib(ostaskswhook.o)
+    0x00000240   0x00000024   Code   RO         1462    .text               mc_w.l(memseta.o)
+    0x00000264   0x0000001a   Code   RO         1468    .text               mf_w.l(dfltui.o)
+    0x0000027e   0x00000032   Code   RO         1470    .text               mf_w.l(dfixui.o)
+    0x000002b0   0x00000020   Code   RO         1486    .text               mc_w.l(llushr.o)
+    0x000002d0   0x00000000   Code   RO         1488    .text               mc_w.l(iusefp.o)
+    0x000002d0   0x00000024   Code   RO         1491    .text               mc_w.l(init.o)
+    0x000002f4   0x00000002   Code   RO          931    i.OS_Dummy          uCOS-II.lib(os_core.o)
+    0x000002f6   0x00000002   Code   RO         1498    i.__scatterload_null  mc_w.l(handlers.o)
+    0x000002f8   0x00000004   PAD
+    0x000002fc   0x00000004   Code   RO           20    .ARM.__at_0x02FC    startup_lpc17xx.o
+    0x00000300   0x000000de   Code   RO         1466    .text               mf_w.l(ddiv.o)
+    0x000003de   0x000000be   Code   RO         1489    .text               mf_w.l(depilogue.o)
+    0x0000049c   0x0000001e   Code   RO         1493    .text               mc_w.l(llshl.o)
+    0x000004ba   0x00000012   Code   RO           51    i.Delay10kUs        main.o
+    0x000004cc   0x00000074   Code   RO          384    i.IO_InputScan      io.o
+    0x00000540   0x000001a8   Code   RO          385    i.IO_OutputCtrl     io.o
+    0x000006e8   0x00000058   Code   RO          386    i.IO_ReadMute       io.o
+    0x00000740   0x00000040   Code   RO          387    i.IO_ReadSwitch     io.o
+    0x00000780   0x000000d4   Code   RO          388    i.IO_init           io.o
+    0x00000854   0x00000018   Code   RO          185    i.NVIC_EnableIRQ    uart.o
+    0x0000086c   0x00000028   Code   RO          186    i.NVIC_SetPriority  uart.o
+    0x00000894   0x00000030   Code   RO          922    i.OSInit            uCOS-II.lib(os_core.o)
+    0x000008c4   0x00000010   Code   RO         1386    i.OSIntCtxSw        uCOS-II.lib(os_cpu_c.o)
+    0x000008d4   0x00000024   Code   RO          923    i.OSIntEnter        uCOS-II.lib(os_core.o)
+    0x000008f8   0x000000ac   Code   RO          924    i.OSIntExit         uCOS-II.lib(os_core.o)
+    0x000009a4   0x00000048   Code   RO          772    i.OSSemCreate       uCOS-II.lib(os_sem.o)
+    0x000009ec   0x000000ac   Code   RO          774    i.OSSemPend         uCOS-II.lib(os_sem.o)
+    0x00000a98   0x00000052   Code   RO          775    i.OSSemPost         uCOS-II.lib(os_sem.o)
+    0x00000aea   0x00000002   PAD
+    0x00000aec   0x00000068   Code   RO          927    i.OSStart           uCOS-II.lib(os_core.o)
+    0x00000b54   0x0000004c   Code   RO         1387    i.OSStartHighRdy    uCOS-II.lib(os_cpu_c.o)
+    0x00000ba0   0x000000bc   Code   RO          828    i.OSTaskCreateExt   uCOS-II.lib(os_task.o)
+    0x00000c5c   0x00000148   Code   RO          829    i.OSTaskDel         uCOS-II.lib(os_task.o)
+    0x00000da4   0x0000007c   Code   RO         1388    i.OSTaskStkInit     uCOS-II.lib(os_cpu_c.o)
+    0x00000e20   0x00000060   Code   RO          886    i.OSTimeDly         uCOS-II.lib(os_time.o)
+    0x00000e80   0x00000094   Code   RO          929    i.OSTimeTick        uCOS-II.lib(os_core.o)
+    0x00000f14   0x0000004c   Code   RO          932    i.OS_EventTO        uCOS-II.lib(os_core.o)
+    0x00000f60   0x000000c8   Code   RO          933    i.OS_EventTaskRdy   uCOS-II.lib(os_core.o)
+    0x00001028   0x00000080   Code   RO          934    i.OS_EventTaskWait  uCOS-II.lib(os_core.o)
+    0x000010a8   0x0000002a   Code   RO          935    i.OS_EventWaitListInit  uCOS-II.lib(os_core.o)
+    0x000010d2   0x00000002   PAD
+    0x000010d4   0x00000034   Code   RO         1292    i.OS_FlagInit       uCOS-II.lib(os_flag.o)
+    0x00001108   0x00000024   Code   RO         1294    i.OS_FlagUnlink     uCOS-II.lib(os_flag.o)
+    0x0000112c   0x00000034   Code   RO          936    i.OS_InitEventList  uCOS-II.lib(os_core.o)
+    0x00001160   0x00000054   Code   RO          937    i.OS_InitMisc       uCOS-II.lib(os_core.o)
+    0x000011b4   0x00000048   Code   RO          938    i.OS_InitRdyList    uCOS-II.lib(os_core.o)
+    0x000011fc   0x00000050   Code   RO          939    i.OS_InitTCBList    uCOS-II.lib(os_core.o)
+    0x0000124c   0x00000038   Code   RO          940    i.OS_InitTaskIdle   uCOS-II.lib(os_core.o)
+    0x00001284   0x00000038   Code   RO          941    i.OS_InitTaskStat   uCOS-II.lib(os_core.o)
+    0x000012bc   0x00000044   Code   RO         1353    i.OS_MemInit        uCOS-II.lib(os_mem.o)
+    0x00001300   0x00000030   Code   RO         1228    i.OS_QInit          uCOS-II.lib(os_q.o)
+    0x00001330   0x00000080   Code   RO          942    i.OS_Sched          uCOS-II.lib(os_core.o)
+    0x000013b0   0x000000f4   Code   RO          943    i.OS_TCBInit        uCOS-II.lib(os_core.o)
+    0x000014a4   0x00000020   Code   RO          944    i.OS_TaskIdle       uCOS-II.lib(os_core.o)
+    0x000014c4   0x0000008c   Code   RO          945    i.OS_TaskStat       uCOS-II.lib(os_core.o)
+    0x00001550   0x000000b0   Code   RO          389    i.ReadInput         io.o
+    0x00001600   0x00000016   Code   RO         1389    i.SysTick_Handler   uCOS-II.lib(os_cpu_c.o)
+    0x00001616   0x00000002   PAD
+    0x00001618   0x0000021c   Code   RO           27    i.SystemInit        system_lpc17xx.o
+    0x00001834   0x00000154   Code   RO           54    i.TASK_IO           main.o
+    0x00001988   0x00000098   Code   RO          724    i.TASK_MODBUS1_SLAVE  task_modbus.o
+    0x00001a20   0x0000000a   Code   RO          725    i.TASK_TIME         task_modbus.o
+    0x00001a2a   0x00000002   PAD
+    0x00001a2c   0x000000a0   Code   RO           56    i.TASK_TIMER        main.o
+    0x00001acc   0x00000114   Code   RO          187    i.TIME_PROCESS      uart.o
+    0x00001be0   0x000000b8   Code   RO          188    i.UART0_IRQHandler  uart.o
+    0x00001c98   0x000000b8   Code   RO          192    i.UART1_IRQHandler  uart.o
+    0x00001d50   0x000000b8   Code   RO          196    i.UART2_IRQHandler  uart.o
+    0x00001e08   0x000000e0   Code   RO          197    i.UART2_Init        uart.o
+    0x00001ee8   0x00000024   Code   RO          198    i.UART2_SendByte    uart.o
+    0x00001f0c   0x000000b8   Code   RO          200    i.UART3_IRQHandler  uart.o
+    0x00001fc4   0x0000000e   Code   RO         1497    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x00001fd2   0x0000000e   Code   RO         1499    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00001fe0   0x00000038   Code   RO          433    i.crc16             modbus.o
+    0x00002018   0x00000038   Code   RO          434    i.crc_detect        modbus.o
+    0x00002050   0x00000110   Code   RO           57    i.main              main.o
+    0x00002160   0x0000005c   Code   RO           58    i.modbus1_updata    main.o
+    0x000021bc   0x0000005e   Code   RO          458    i.modbus2_err_reply  modbus.o
+    0x0000221a   0x00000002   PAD
+    0x0000221c   0x00000264   Code   RO          459    i.modbus2_listen    modbus.o
+    0x00002480   0x000001ea   Code   RO          464    i.modbus2_reply     modbus.o
+    0x0000266a   0x00000002   PAD
+    0x0000266c   0x00000018   Code   RO          204    i.uart0_timeout_8byte_start  uart.o
+    0x00002684   0x0000001c   Code   RO          205    i.uart0_timeout_8byte_stop  uart.o
+    0x000026a0   0x00000018   Code   RO          206    i.uart1_timeout_8byte_start  uart.o
+    0x000026b8   0x0000001c   Code   RO          207    i.uart1_timeout_8byte_stop  uart.o
+    0x000026d4   0x00000018   Code   RO          208    i.uart2_timeout_8byte_start  uart.o
+    0x000026ec   0x0000001c   Code   RO          209    i.uart2_timeout_8byte_stop  uart.o
+    0x00002708   0x00000018   Code   RO          210    i.uart3_timeout_8byte_start  uart.o
+    0x00002720   0x0000001c   Code   RO          211    i.uart3_timeout_8byte_stop  uart.o
+    0x0000273c   0x00000014   Code   RO          366    i.wdt_feed          watchdog.o
+    0x00002750   0x0000001a   Code   RO          367    i.wdt_init          watchdog.o
+    0x0000276a   0x00000200   Data   RO          480    .constdata          modbus.o
+    0x0000296a   0x00000108   Data   RO          947    .constdata          uCOS-II.lib(os_core.o)
+    0x00002a72   0x00000002   PAD
+    0x00002a74   0x00000020   Data   RO         1495    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Base: 0x10000000, Size: 0x00003580, Max: 0x00008000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x10000000   0x00000004   Data   RW           28    .data               system_lpc17xx.o
+    0x10000004   0x00000040   Data   RW           60    .data               main.o
+    0x10000044   0x00000028   Data   RW          213    .data               uart.o
+    0x1000006c   0x00000007   Data   RW          391    .data               io.o
+    0x10000073   0x00000001   PAD
+    0x10000074   0x00000002   Data   RW          481    .data               modbus.o
+    0x10000076   0x00000002   PAD
+    0x10000078   0x0000004c   Data   RW          948    .data               uCOS-II.lib(os_core.o)
+    0x100000c4   0x00000004   Data   RW         1390    .data               uCOS-II.lib(os_cpu_c.o)
+    0x100000c8   0x000014c0   Zero   RW           59    .bss                main.o
+    0x10001588   0x00000030   Zero   RW          212    .bss                uart.o
+    0x100015b8   0x0000001a   Zero   RW          390    .bss                io.o
+    0x100015d2   0x000000b4   Zero   RW          479    .bss                modbus.o
+    0x10001686   0x00000002   PAD
+    0x10001688   0x00000840   Zero   RW          726    .bss                task_modbus.o
+    0x10001ec8   0x000014b8   Zero   RW          946    .bss                uCOS-II.lib(os_core.o)
+    0x10003380   0x00000200   Zero   RW           17    STACK               startup_lpc17xx.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+         0          0          0          0          0       4244   core_cm3.o
+      1080         62          0          7         26       3523   io.o
+       882        144          0         64       5312      32360   main.o
+      1308         26        512          2        180       5438   modbus.o
+        32          8        204          0        512        912   startup_lpc17xx.o
+       540         62          0          4          0        739   system_lpc17xx.o
+       162         10          0          0       2112       1727   task_modbus.o
+      1544        294          0         40         48      14577   uart.o
+        46          0          0          0          0        802   watchdog.o
+
+    ----------------------------------------------------------------------
+      5600        606        748        120       8192      64322   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         6          0          0          3          2          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+         0          0          0          0          0          0   iusefp.o
+        30          0          0          0          0         68   llshl.o
+        32          0          0          0          0         68   llushr.o
+        36          0          0          0          0        108   memseta.o
+       222          0          0          0          0        100   ddiv.o
+       190          0          0          0          0        176   depilogue.o
+        50          0          0          0          0         76   dfixui.o
+        26          0          0          0          0         76   dfltui.o
+         2          0          0          0          0       8109   osinithookbegin.o
+         2          0          0          0          0        408   osinithookend.o
+         4          0          0          0          0        459   ostaskcreatehook.o
+         4          0          0          0          0        444   ostaskdelhook.o
+         2          0          0          0          0        413   ostaskidlehook.o
+         2          0          0          0          0        413   ostaskstathook.o
+         2          0          0          0          0        403   ostaskswhook.o
+         4          0          0          0          0        444   ostcbinithook.o
+         2          0          0          0          0        413   ostimetickhook.o
+      1900        358        264         76       5304      14904   os_core.o
+       536         86          0          4          0       3910   os_cpu_c.o
+        88         10          0          0          0        962   os_flag.o
+        68          8          0          0          0        413   os_mem.o
+        48         10          0          0          0        431   os_q.o
+       326         18          0          0          0       9509   os_sem.o
+       516         48          0          0          0       1958   os_task.o
+        96         14          0          0          0        436   os_time.o
+
+    ----------------------------------------------------------------------
+      4286        568        266         80       5304      44769   Library Totals
+        12          0          2          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       184         16          0          0          0        312   mc_w.l
+       488          0          0          0          0        428   mf_w.l
+        24          0          0          0          0      11506   uCOS-II hook.lib
+      3578        552        264         80       5304      32523   uCOS-II.lib
+
+    ----------------------------------------------------------------------
+      4286        568        266         80       5304      44769   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      9886       1174       1014        200      13496     104737   Grand Totals
+      9886       1174       1014        200      13496     104737   ELF Image Totals
+      9886       1174       1014        200          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                10900 (  10.64kB)
+    Total RW  Size (RW Data + ZI Data)             13696 (  13.38kB)
+    Total ROM Size (Code + RO Data + RW Data)      11100 (  10.84kB)
+
+==============================================================================
+

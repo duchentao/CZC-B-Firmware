@@ -1,0 +1,17 @@
+.\out\debuginram\watchdog.o: USER_CODE\watchdog.c
+.\out\debuginram\watchdog.o: USER_CODE\watchdog.h
+.\out\debuginram\watchdog.o: .\LPC17xx\config.h
+.\out\debuginram\watchdog.o: .\uCOS-II\includes.h
+.\out\debuginram\watchdog.o: .\uCOS-II\.\CPU\os_cpu.h
+.\out\debuginram\watchdog.o: .\uCOS-II\.\os_cfg.h
+.\out\debuginram\watchdog.o: .\uCOS-II\.\ucos_ii.h
+.\out\debuginram\watchdog.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\out\debuginram\watchdog.o: .\LPC17xx\LPC17xx.h
+.\out\debuginram\watchdog.o: .\CM3\core_cm3.h
+.\out\debuginram\watchdog.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\out\debuginram\watchdog.o: .\LPC17xx\system_LPC17xx.h
+.\out\debuginram\watchdog.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\out\debuginram\watchdog.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\out\debuginram\watchdog.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\out\debuginram\watchdog.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\out\debuginram\watchdog.o: C:\Keil\ARM\ARMCC\bin\..\include\rt_misc.h

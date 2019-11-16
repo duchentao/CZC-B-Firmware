@@ -1,0 +1,165 @@
+Dependencies for Project 'csc-a', Target 'DebugInRAM': (DO NOT MODIFY !)
+F (.\CM3\core_cm3.c)(0x4CBBB5EE)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\CM3 -I .\LPC17xx -I .\uCOS-II-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\NXP\LPC17xx-D__UVISION_VERSION="518"-o .\out\debuginram\core_cm3.o --omf_browse .\out\debuginram\core_cm3.crf --depend .\out\debuginram\core_cm3.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+F (.\LPC17xx\Startup\startup_LPC17xx.s)(0x4CBBE3B6)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\NXP\LPC17xx--pd "__UVISION_VERSION SETA 518"--list .\out\debuginram\startup_lpc17xx.lst --xref -o .\out\debuginram\startup_lpc17xx.o --depend .\out\debuginram\startup_lpc17xx.d)
+F (.\LPC17xx\system_LPC17xx.c)(0x5247837E)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\CM3 -I .\LPC17xx -I .\uCOS-II-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\NXP\LPC17xx-D__UVISION_VERSION="518"-o .\out\debuginram\system_lpc17xx.o --omf_browse .\out\debuginram\system_lpc17xx.crf --depend .\out\debuginram\system_lpc17xx.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (LPC17xx\LPC17xx.h)(0x524687B0)
+I (.\CM3\core_cm3.h)(0x4CBBC62C)
+I (LPC17xx\system_LPC17xx.h)(0x4CBBE7CE)
+F (.\USER_CODE\main.c)(0x5D09F6F3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\CM3 -I .\LPC17xx -I .\uCOS-II-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\NXP\LPC17xx-D__UVISION_VERSION="518"-o .\out\debuginram\main.o --omf_browse .\out\debuginram\main.crf --depend .\out\debuginram\main.d)
+I (USER_CODE\main.h)(0x5955040C)
+I (.\LPC17xx\config.h)(0x524663D8)
+I (.\uCOS-II\includes.h)(0x4CA2D54E)
+I (.\uCOS-II\.\CPU\os_cpu.h)(0x4FFE2FC0)
+I (.\uCOS-II\.\os_cfg.h)(0x521D4E7A)
+I (.\uCOS-II\.\ucos_ii.h)(0x3C51603C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x569DEA3A)
+I (.\LPC17xx\LPC17xx.h)(0x524687B0)
+I (.\CM3\core_cm3.h)(0x4CBBC62C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (.\LPC17xx\system_LPC17xx.h)(0x4CBBE7CE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x569DEA38)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\setjmp.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\rt_misc.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
+I (USER_CODE\IRQ.h)(0x4D3E77FC)
+I (USER_CODE\watchdog.h)(0x59283E55)
+I (USER_CODE\IO.h)(0x5CF7BAC3)
+I (USER_CODE\uart.h)(0x5936CA62)
+I (USER_CODE\task_modbus.h)(0x5937EA57)
+I (USER_CODE\task_setup.h)(0x593E8247)
+F (.\USER_CODE\IRQ.h)(0x4D3E77FC)()
+F (.\USER_CODE\uart.c)(0x5936CA95)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\CM3 -I .\LPC17xx -I .\uCOS-II-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\NXP\LPC17xx-D__UVISION_VERSION="518"-o .\out\debuginram\uart.o --omf_browse .\out\debuginram\uart.crf --depend .\out\debuginram\uart.d)
+I (USER_CODE\uart.h)(0x5936CA62)
+I (USER_CODE\main.h)(0x5955040C)
+I (.\LPC17xx\config.h)(0x524663D8)
+I (.\uCOS-II\includes.h)(0x4CA2D54E)
+I (.\uCOS-II\.\CPU\os_cpu.h)(0x4FFE2FC0)
+I (.\uCOS-II\.\os_cfg.h)(0x521D4E7A)
+I (.\uCOS-II\.\ucos_ii.h)(0x3C51603C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x569DEA3A)
+I (.\LPC17xx\LPC17xx.h)(0x524687B0)
+I (.\CM3\core_cm3.h)(0x4CBBC62C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (.\LPC17xx\system_LPC17xx.h)(0x4CBBE7CE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x569DEA38)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\setjmp.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\rt_misc.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
+I (USER_CODE\IRQ.h)(0x4D3E77FC)
+F (.\USER_CODE\watchdog.c)(0x59283E34)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\CM3 -I .\LPC17xx -I .\uCOS-II-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\NXP\LPC17xx-D__UVISION_VERSION="518"-o .\out\debuginram\watchdog.o --omf_browse .\out\debuginram\watchdog.crf --depend .\out\debuginram\watchdog.d)
+I (USER_CODE\watchdog.h)(0x59283E55)
+I (.\LPC17xx\config.h)(0x524663D8)
+I (.\uCOS-II\includes.h)(0x4CA2D54E)
+I (.\uCOS-II\.\CPU\os_cpu.h)(0x4FFE2FC0)
+I (.\uCOS-II\.\os_cfg.h)(0x521D4E7A)
+I (.\uCOS-II\.\ucos_ii.h)(0x3C51603C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x569DEA3A)
+I (.\LPC17xx\LPC17xx.h)(0x524687B0)
+I (.\CM3\core_cm3.h)(0x4CBBC62C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (.\LPC17xx\system_LPC17xx.h)(0x4CBBE7CE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x569DEA38)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\setjmp.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\rt_misc.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
+F (.\USER_CODE\IO.c)(0x5D235A42)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\CM3 -I .\LPC17xx -I .\uCOS-II-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\NXP\LPC17xx-D__UVISION_VERSION="518"-o .\out\debuginram\io.o --omf_browse .\out\debuginram\io.crf --depend .\out\debuginram\io.d)
+I (USER_CODE\IO.h)(0x5CF7BAC3)
+I (USER_CODE\main.h)(0x5955040C)
+I (.\LPC17xx\config.h)(0x524663D8)
+I (.\uCOS-II\includes.h)(0x4CA2D54E)
+I (.\uCOS-II\.\CPU\os_cpu.h)(0x4FFE2FC0)
+I (.\uCOS-II\.\os_cfg.h)(0x521D4E7A)
+I (.\uCOS-II\.\ucos_ii.h)(0x3C51603C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x569DEA3A)
+I (.\LPC17xx\LPC17xx.h)(0x524687B0)
+I (.\CM3\core_cm3.h)(0x4CBBC62C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (.\LPC17xx\system_LPC17xx.h)(0x4CBBE7CE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x569DEA38)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\setjmp.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\rt_misc.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
+I (USER_CODE\IRQ.h)(0x4D3E77FC)
+F (.\USER_CODE\modbus.c)(0x5CFE5650)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\CM3 -I .\LPC17xx -I .\uCOS-II-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\NXP\LPC17xx-D__UVISION_VERSION="518"-o .\out\debuginram\modbus.o --omf_browse .\out\debuginram\modbus.crf --depend .\out\debuginram\modbus.d)
+I (USER_CODE\main.h)(0x5955040C)
+I (.\LPC17xx\config.h)(0x524663D8)
+I (.\uCOS-II\includes.h)(0x4CA2D54E)
+I (.\uCOS-II\.\CPU\os_cpu.h)(0x4FFE2FC0)
+I (.\uCOS-II\.\os_cfg.h)(0x521D4E7A)
+I (.\uCOS-II\.\ucos_ii.h)(0x3C51603C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x569DEA3A)
+I (.\LPC17xx\LPC17xx.h)(0x524687B0)
+I (.\CM3\core_cm3.h)(0x4CBBC62C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (.\LPC17xx\system_LPC17xx.h)(0x4CBBE7CE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x569DEA38)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\setjmp.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\rt_misc.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
+I (USER_CODE\IRQ.h)(0x4D3E77FC)
+I (USER_CODE\modbus.h)(0x5936C8B8)
+I (USER_CODE\uart.h)(0x5936CA62)
+I (USER_CODE\IO.h)(0x5CF7BAC3)
+F (.\USER_CODE\task_modbus.c)(0x5CFE5642)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\CM3 -I .\LPC17xx -I .\uCOS-II-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\NXP\LPC17xx-D__UVISION_VERSION="518"-o .\out\debuginram\task_modbus.o --omf_browse .\out\debuginram\task_modbus.crf --depend .\out\debuginram\task_modbus.d)
+I (USER_CODE\main.h)(0x5955040C)
+I (.\LPC17xx\config.h)(0x524663D8)
+I (.\uCOS-II\includes.h)(0x4CA2D54E)
+I (.\uCOS-II\.\CPU\os_cpu.h)(0x4FFE2FC0)
+I (.\uCOS-II\.\os_cfg.h)(0x521D4E7A)
+I (.\uCOS-II\.\ucos_ii.h)(0x3C51603C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x569DEA3A)
+I (.\LPC17xx\LPC17xx.h)(0x524687B0)
+I (.\CM3\core_cm3.h)(0x4CBBC62C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (.\LPC17xx\system_LPC17xx.h)(0x4CBBE7CE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x569DEA38)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\setjmp.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\rt_misc.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
+I (USER_CODE\IRQ.h)(0x4D3E77FC)
+I (USER_CODE\io.h)(0x5CF7BAC3)
+I (USER_CODE\uart.h)(0x5936CA62)
+I (USER_CODE\modbus.h)(0x5936C8B8)
+I (USER_CODE\task_modbus.h)(0x5937EA57)
+F (.\USER_CODE\task_setup.c)(0x593E83FD)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\CM3 -I .\LPC17xx -I .\uCOS-II-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\NXP\LPC17xx-D__UVISION_VERSION="518"-o .\out\debuginram\task_setup.o --omf_browse .\out\debuginram\task_setup.crf --depend .\out\debuginram\task_setup.d)
+I (USER_CODE\main.h)(0x5955040C)
+I (.\LPC17xx\config.h)(0x524663D8)
+I (.\uCOS-II\includes.h)(0x4CA2D54E)
+I (.\uCOS-II\.\CPU\os_cpu.h)(0x4FFE2FC0)
+I (.\uCOS-II\.\os_cfg.h)(0x521D4E7A)
+I (.\uCOS-II\.\ucos_ii.h)(0x3C51603C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x569DEA3A)
+I (.\LPC17xx\LPC17xx.h)(0x524687B0)
+I (.\CM3\core_cm3.h)(0x4CBBC62C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (.\LPC17xx\system_LPC17xx.h)(0x4CBBE7CE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x569DEA38)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\setjmp.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\rt_misc.h)(0x569DEA3A)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
+I (USER_CODE\IRQ.h)(0x4D3E77FC)
+I (USER_CODE\io.h)(0x5CF7BAC3)
+I (USER_CODE\uart.h)(0x5936CA62)
+I (USER_CODE\modbus.h)(0x5936C8B8)
+I (USER_CODE\task_setup.h)(0x593E8247)
+F (.\uCOS-II\hook\uCOS-II hook.lib)(0x4A6A5E80)()
+F (.\uCOS-II\OS_CFG.H)(0x521D4E7A)()
+F (.\uCOS-II\INCLUDES.H)(0x4CA2D54E)()
+F (.\uCOS-II\uCOS_II.H)(0x3C51603C)()
+F (.\uCOS-II\uCOS-II.lib)(0x593FFB24)()

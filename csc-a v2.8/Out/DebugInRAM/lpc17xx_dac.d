@@ -1,0 +1,9 @@
+.\out\debuginram\lpc17xx_dac.o: Drivers\lpc17xx_dac.c
+.\out\debuginram\lpc17xx_dac.o: Drivers\lpc17xx_dac.h
+.\out\debuginram\lpc17xx_dac.o: .\LPC17xx\LPC17xx.h
+.\out\debuginram\lpc17xx_dac.o: .\CM3\core_cm3.h
+.\out\debuginram\lpc17xx_dac.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\out\debuginram\lpc17xx_dac.o: .\LPC17xx\system_LPC17xx.h
+.\out\debuginram\lpc17xx_dac.o: Drivers\lpc_types.h
+.\out\debuginram\lpc17xx_dac.o: Drivers\lpc17xx_clkpwr.h
+.\out\debuginram\lpc17xx_dac.o: Drivers\lpc17xx_libcfg_default.h

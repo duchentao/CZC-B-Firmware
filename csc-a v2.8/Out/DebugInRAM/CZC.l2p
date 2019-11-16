@@ -1,0 +1,17 @@
+--cpu Cortex-M3
+".\out\debuginram\core_cm3.o"
+".\out\debuginram\startup_lpc17xx.o"
+".\out\debuginram\system_lpc17xx.o"
+".\out\debuginram\main.o"
+".\out\debuginram\uart.o"
+".\out\debuginram\watchdog.o"
+".\out\debuginram\io.o"
+".\out\debuginram\modbus.o"
+".\out\debuginram\task_modbus.o"
+".\out\debuginram\task_setup.o"
+".\uCOS-II\hook\uCOS-II hook.lib"
+".\uCOS-II\uCOS-II.lib"
+--library_type=microlib --strict --scatter ".\Out\DebugInRAM\CZC.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Out\DebugInRAM\CZC.map" -o .\Out\DebugInRAM\CZC.axf

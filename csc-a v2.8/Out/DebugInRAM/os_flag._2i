@@ -1,0 +1,6 @@
+-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I.\CM3 -I.\LPC17xx -I.\uCOS-II
+-I C:\Keil\ARM\RV31\INC
+-I C:\Keil\ARM\CMSIS\Include
+-I C:\Keil\ARM\Inc\NXP\LPC17xx
+
+-o .\out\debuginram\os_flag.o --omf_browse .\out\debuginram\os_flag.crf --depend .\out\debuginram\os_flag.d --feedback ".\Out\DebugInRAM\LPC1700.fed" "uCOS-II\OS_FLAG.C"

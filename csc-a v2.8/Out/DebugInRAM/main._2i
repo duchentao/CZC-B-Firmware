@@ -1,0 +1,6 @@
+-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I.\CM3 -I.\LPC17xx -I.\uCOS-II
+-I C:\Keil\ARM\RV31\INC
+-I C:\Keil\ARM\CMSIS\Include
+-I C:\Keil\ARM\Inc\NXP\LPC17xx
+
+-o .\out\debuginram\main.o --omf_browse .\out\debuginram\main.crf --depend .\out\debuginram\main.d --feedback ".\Out\DebugInRAM\CZC.fed" "USER_CODE\main.c"

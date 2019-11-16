@@ -1,0 +1,128 @@
+;#<FEEDBACK># ARM Linker, 5.03 [Build 76]: Last Updated: Mon Nov 11 14:24:20 2019
+;VERSION 0.2
+;FILE core_cm3.o
+__REV16 <= USED 0
+__REVSH <= USED 0
+__get_MSP <= USED 0
+__get_PSP <= USED 0
+__set_MSP <= USED 0
+__set_PSP <= USED 0
+;FILE io.o
+;FILE main.o
+Delay1Us <= USED 0
+Open_Delay <= USED 0
+TASK_SHOW <= USED 0
+;FILE modbus.o
+modbus0_ask03 <= USED 0
+modbus0_err_reply <= USED 0
+modbus0_listen <= USED 0
+modbus0_read03 <= USED 0
+modbus0_read05 <= USED 0
+modbus0_read06 <= USED 0
+modbus0_read16 <= USED 0
+modbus0_reply <= USED 0
+modbus0_set05 <= USED 0
+modbus0_set06 <= USED 0
+modbus0_set16 <= USED 0
+modbus1_ask03 <= USED 0
+modbus1_err_reply <= USED 0
+modbus1_listen <= USED 0
+modbus1_read03 <= USED 0
+modbus1_read05 <= USED 0
+modbus1_read06 <= USED 0
+modbus1_read16 <= USED 0
+modbus1_reply <= USED 0
+modbus1_set05 <= USED 0
+modbus1_set06 <= USED 0
+modbus1_set16 <= USED 0
+modbus2_ask03 <= USED 0
+modbus2_read03 <= USED 0
+modbus2_read05 <= USED 0
+modbus2_read06 <= USED 0
+modbus2_read16 <= USED 0
+modbus2_set05 <= USED 0
+modbus2_set06 <= USED 0
+modbus2_set16 <= USED 0
+modbus3_ask03 <= USED 0
+modbus3_err_reply <= USED 0
+modbus3_listen <= USED 0
+modbus3_read03 <= USED 0
+modbus3_read05 <= USED 0
+modbus3_read06 <= USED 0
+modbus3_read16 <= USED 0
+modbus3_reply <= USED 0
+modbus3_set05 <= USED 0
+modbus3_set06 <= USED 0
+modbus3_set16 <= USED 0
+;FILE os_core.o
+OSSchedLock <= USED 0
+OSSchedUnlock <= USED 0
+OSStatInit <= USED 0
+OSVersion <= USED 0
+;FILE os_cpu_c.o
+changeToUSRMode <= USED 0
+;FILE os_flag.o
+OSFlagAccept <= USED 0
+OSFlagCreate <= USED 0
+OSFlagDel <= USED 0
+OSFlagPend <= USED 0
+OSFlagPost <= USED 0
+OSFlagQuery <= USED 0
+;FILE os_mem.o
+OSMemCreate <= USED 0
+OSMemGet <= USED 0
+OSMemPut <= USED 0
+OSMemQuery <= USED 0
+;FILE os_q.o
+OSQAccept <= USED 0
+OSQCreate <= USED 0
+OSQDel <= USED 0
+OSQFlush <= USED 0
+OSQPend <= USED 0
+OSQPost <= USED 0
+OSQPostFront <= USED 0
+OSQPostOpt <= USED 0
+OSQQuery <= USED 0
+;FILE os_sem.o
+OSSemAccept <= USED 0
+OSSemDel <= USED 0
+OSSemQuery <= USED 0
+;FILE os_task.o
+OSTaskChangePrio <= USED 0
+OSTaskCreate <= USED 0
+OSTaskDelReq <= USED 0
+OSTaskQuery <= USED 0
+OSTaskResume <= USED 0
+OSTaskStkChk <= USED 0
+OSTaskSuspend <= USED 0
+;FILE os_time.o
+OSTimeDlyHMSM <= USED 0
+OSTimeDlyResume <= USED 0
+OSTimeGet <= USED 0
+OSTimeSet <= USED 0
+;FILE osinithookbegin.o
+;FILE osinithookend.o
+;FILE ostaskcreatehook.o
+;FILE ostaskdelhook.o
+;FILE ostaskidlehook.o
+;FILE ostaskstathook.o
+;FILE ostaskswhook.o
+;FILE ostcbinithook.o
+;FILE ostimetickhook.o
+;FILE startup_lpc17xx.o
+;FILE system_lpc17xx.o
+;FILE task_modbus.o
+;FILE task_setup.o
+TASK_SETUP <= USED 0
+;FILE uart.o
+UART0_Init <= USED 0
+UART0_SendByte <= USED 0
+UART0_SendStr <= USED 0
+UART1_Init <= USED 0
+UART1_SendByte <= USED 0
+UART1_SendStr <= USED 0
+UART2_SendStr <= USED 0
+UART3_Init <= USED 0
+UART3_SendByte <= USED 0
+UART3_SendStr <= USED 0
+;FILE watchdog.o
